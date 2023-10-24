@@ -433,6 +433,164 @@ body
     font-weight: 500
     line-height: 140%
 
+.payment-popup
+  display: flex
+  background: $primary1
+  max-width: 880px
+  position: relative
+  flex-direction: column
+  .title
+    width: 100%
+    color: #FFF
+    font-weight: 500
+    line-height: normal
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-self: stretch
+    .close
+      position: relative
+      top: auto
+      right: auto
+      color: #FFF
+      font-size: 12px
+      font-weight: 400
+      line-height: 140%
+      display: flex
+      align-items: center
+      .mfp-close
+        position: relative
+        opacity: 1
+        padding: 5px
+  hr
+    border: none
+    height: 1px
+    width: 100%
+  .fields
+    .label
+      display: flex
+      flex-direction: column
+      gap: 16px
+      color: white
+      font-weight: 500
+      line-height: 140%
+      margin-bottom: 24px
+      span
+        b
+          font-weight: 500
+          color: $lightblue
+      .select.active
+        .arr
+          transform: rotate(180deg)
+      .select
+        background: $hoverblue
+        display: flex
+        justify-content: space-between
+        align-items: center
+        img
+          max-height: 100%
+          width: auto
+        &:hover
+          cursor: pointer
+        .arr
+          transition: all 0.3s ease
+        select
+          display: none
+      .options
+        display: none
+        .option
+          background: $hoverblue
+          display: flex
+          justify-content: start
+          align-items: center
+          margin-bottom: 5px
+          &:hover
+            cursor: pointer
+      .promo
+        display: flex
+        align-items: flex-start
+        gap: 8px
+        background: $hoverblue
+        a.button
+          display: flex
+          align-items: flex-start
+          gap: 16px
+          align-self: stretch
+          background: $primary1
+          color: #FFF
+          font-weight: 500
+          line-height: 140%
+        label
+          position: relative
+          width: 100%
+          .icon 
+            position: absolute
+            left: 24px
+            top: 50%
+            transform: translateY(-50%)
+          input
+            background: $black
+            display: flex
+            align-items: flex-start
+            gap: 16px
+            flex: 1 0 0
+            color: white
+            font-weight: 400
+            line-height: 140%
+            width: 100%
+            border: none
+      .main-theme
+        display: flex
+        align-items: flex-start
+        align-self: stretch
+        background: $hoverblue
+        color: rgba(255, 255, 255, 0.60)
+        font-weight: 400
+        line-height: 140%
+        width: 100%
+        border: none
+        &::placeholder
+          color: rgba(255, 255, 255, 0.60)
+    .checkbox
+      color: rgba(255, 255, 255, 0.60)
+      font-weight: 400
+      line-height: 140%
+      a
+        color: white
+      label
+        display: flex
+        flex-direction: row
+        gap: 16px
+        align-items: center
+        input
+          display: none
+        svg
+          .circle
+            fill: white
+          rect
+            transition: all 0.3s ease
+        svg.active
+          .circle
+            fill: $lightblue
+            x: 4 !important
+        &:hover
+          cursor: pointer
+    .main_button
+      display: flex
+      width: 100%
+      justify-content: center
+      align-items: center
+      gap: 16px
+      align-self: stretch
+      background: $hoverblue
+      color: white
+      text-align: center
+      font-weight: 500
+      line-height: 140%
+      border: none
+      span
+        color: $lightblue
+
 #z3_popup
   .wrapper
     .column-2

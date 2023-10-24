@@ -464,6 +464,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	});
 
+	$('.payment-popup .fields .select').on('click', function() {
+		if ($(this).hasClass('active')) {
+			$(this).siblings('.options').slideUp();
+			$(this).removeClass('active');
+		} else {
+			$(this).siblings('.options').slideDown();
+			$(this).addClass('active');
+		}
+	});
+
+	$('.payment-popup .fields .options .option').on('click', function() {
+		var num = $(this).attr('data-num');
+		$("#case_pay_select").val(num).change();
+
+		$('.select .icon img').remove();
+		$(this).children('img').clone().appendTo( ".select .icon" );
+
+		$('.payment-popup .fields .select').siblings('.options').slideUp(100);
+		$('.payment-popup .fields .select').removeClass('active');
+
+	});
+	
 	$('.checkbox input').on('change', function() {
 		$(this).siblings('svg').toggleClass('active');
 	});
@@ -632,6 +654,31 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	$('.z3_popup').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		showCloseBtn: false,
+		focus: '#name',
+		mainClass: 'mfp-with-zoom',
+		zoom: {
+			enabled: true,
+			duration: 300,
+			easing: 'ease-in-out',
+			opener: function(openerElement) {
+				return openerElement.is('img') ? openerElement : openerElement.find('img');
+			}
+		},
+		callbacks: {
+			beforeOpen: function() {
+				if($(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#name';
+				}
+			}
+		}
+	});
+
+	$('.payment_popup').magnificPopup({
 		type: 'inline',
 		preloader: false,
 		showCloseBtn: false,

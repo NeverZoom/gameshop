@@ -446,3 +446,118 @@
   </div>
 
 </div>
+
+<!-- Payment -->
+<a href="#payment_popup" class="button payment_popup">case payment</a>
+<div id="payment_popup" class="payment-popup white-popup-block mfp-hide">
+  <div class="title">
+    Оплатить кейс
+    <div class="close">
+      <span class="d-block d-lg-none">Закрыть</span>
+      <svg class="mfp-close" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.00024 2L30.4838 30.0835" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30.4834 2L1.99981 30.0835" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>    
+    </div>
+  </div>
+  <hr>
+  <form action="">
+    <div class="fields">
+      <div class="row">
+        <div class="col-12">
+          <div class="payment_type label">
+            Способ оплаты
+            <div class="select">
+              <select name="" id="case_pay_select">
+                <option value="1">qiwi</option>
+                <option value="2">mir</option>
+              </select>
+              <span class="icon">
+                <img src="images/dist/qiwi.png" alt="">
+              </span> 
+              <svg class="arr" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9181 8.94995L13.3981 15.47C12.6281 16.24 11.3681 16.24 10.5981 15.47L4.07812 8.94995" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>                             
+            </div>
+            <div class="options">
+              <div class="option" data-num="1">
+                <img src="images/dist/qiwi.png" alt="">
+              </div>
+              <div class="option" data-num="2">
+                <img src="images/dist/mir.png" alt="">                 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="label">
+            Промокод
+            <div class="promo">
+              <label>
+                <input type="text" placeholder="" value="XCSADTEWT98DAS">
+                <input type="hidden" class="is_active" value="0">
+                <div class="icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 6V8.42C22 10 21 11 19.42 11H16V4.01C16 2.9 16.91 2 18.02 2C19.11 2.01 20.11 2.45 20.83 3.17C21.55 3.9 22 4.9 22 6Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 7V21C2 21.83 2.94 22.3 3.6 21.8L5.31 20.52C5.71 20.22 6.27 20.26 6.63 20.62L8.29 22.29C8.68 22.68 9.32 22.68 9.71 22.29L11.39 20.61C11.74 20.26 12.3 20.22 12.69 20.52L14.4 21.8C15.06 22.29 16 21.82 16 21V4C16 2.9 16.9 2 18 2H7H6C3 2 2 3.79 2 6V7Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.26953 13.73L11.7295 8.27002" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.9242 13.5H11.9332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.19373 8.5H6.20271" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+                </div>
+              </label>
+              <a href="javascript:void(0);" class="button">Применить</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="label">
+            Списать бонусы
+            <div class="promo">
+              <label>
+                <input type="text" placeholder="" value="340 бонусов">
+                <input type="hidden" class="is_active" value="0">
+                <div class="icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 17.0601H12" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.21997 13.5H9.78003C11.56 13.5 12 13.94 12 15.7V19.81C12 21.57 11.56 22.01 9.78003 22.01H4.21997C2.43997 22.01 2 21.57 2 19.81V15.7C2 13.94 2.43997 13.5 4.21997 13.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 15C22 18.87 18.87 22 15 22L16.05 20.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 9C2 5.13 5.13 2 9 2L7.95001 3.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.5 11C20.9853 11 23 8.98528 23 6.5C23 4.01472 20.9853 2 18.5 2C16.0147 2 14 4.01472 14 6.5C14 8.98528 16.0147 11 18.5 11Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                                      
+                </div>
+              </label>
+              <a href="javascript:void(0);" class="button">Списать</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="label">
+            ФИО
+            <input type="text" class="main-theme" placeholder="Иванов Иван Иванович">
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="label">
+            Номер телефона
+            <input type="text" class="main-theme" placeholder="+7 (999) 999-99-99">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="label checkbox">
+            <label>
+              <input type="checkbox" name="" id="" checked>
+              <svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="32" rx="12" fill="#2645F5"/>
+                <rect class="circle" x="20" y="4" width="24" height="24" rx="8" fill="#fff"/>
+              </svg>
+              <span>Я принимаю условия <a href="#">Пользовательского соглашения</a></span>
+            </label>   
+          </div>
+          <button class="main_button">Оплатить <span>2699 ₽</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
