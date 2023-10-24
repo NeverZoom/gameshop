@@ -1,0 +1,644 @@
+.top-line
+  .user_menu_wrapper.active
+    z-index: 10
+    opacity: 1
+    pointer-events: all
+  .user_menu_wrapper
+    transition: all 0.3s ease
+    position: absolute
+    top: 155px
+    z-index: -1
+    pointer-events: none
+    opacity: 0
+    .button
+      display: flex
+      padding: 16px !important
+      align-items: center
+      gap: 10px
+      align-self: stretch
+      border-radius: 0px 0px 16px 16px !important
+      background: $primary2
+      color: white
+      font-size: 14px !important
+      font-weight: 400
+      line-height: 140%
+      border: none !important
+      width: 100%
+    ul
+      border-radius: 16px 16px 0px 0px
+      background: $primary1
+      padding: 16px
+      margin: 0
+      gap: 12px
+      list-style: none
+      display: flex
+      flex-direction: column
+      align-self: stretch
+      li
+        &:last-child
+          a
+            border: none
+            padding: 0
+      li
+        display: flex
+        align-items: center
+        width: 100%
+        a
+          display: flex
+          gap: 8px
+          align-items: center
+          width: 100%
+          color: white
+          font-size: 14px
+          font-weight: 400
+          line-height: 140%
+          padding-bottom: 12px
+          border-bottom: 1px solid rgba(255, 255, 255, 0.30)
+  .user_menu.active
+    svg
+      transform: rotate(0deg)
+  .user_menu
+    display: flex
+    padding: 9px 53px 9px 16px
+    justify-content: space-between
+    align-items: center
+    gap: 15px
+    border-radius: 70px
+    background: $primary1
+    color: white
+    font-size: 16px
+    font-weight: 400
+    line-height: 140%
+    position: relative
+    &:hover
+      cursor: pointer
+    .name
+      width: max-content
+      max-width: 210px
+    img
+      position: absolute
+      height: 48px
+      width: 48px
+      border-radius: 100%
+      right: 0
+    svg
+      transition: all 0.3s ease
+      transform: rotate(180deg)
+  .menu
+    height: 56px
+    padding: 16px 32px
+    justify-content: space-between
+    align-items: center
+    background: $primary1
+    nav
+      width: 100%
+      display: flex
+      justify-content: center
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        gap: 64px
+        li
+          a
+            font-size: 18px
+            font-weight: 400
+            line-height: 140%
+            color: white
+            &:hover
+              color: $lightblue2
+              svg
+                path
+                  stroke: $lightblue2
+  .main
+    padding: 32px 0
+    // background: $primary2
+    .burger
+      display: flex
+      gap: 8px
+      align-items: center
+      span
+        color: white
+        font-size: 12px
+        font-weight: 400
+        line-height: 140%
+    .search
+      width: 55%
+      max-width: 550px
+      display: inline-block
+      label
+        position: relative
+        width: 100%
+        input
+          padding: 17px 16px
+          border-radius: 16px
+          background: $primary1
+          color: rgba(156, 171, 255, 0.60)
+          font-size: 18px
+          font-weight: 400
+          border: none
+          width: 100%
+          &::placeholder
+            color: rgba(156, 171, 255, 0.60)  
+            font-size: 18px
+            font-weight: 400
+        button.icon
+          position: absolute
+          right: 16px
+          top: 12px
+          background: none
+          border: none
+    .chapter
+      padding-left: 40px
+      display: inline-flex
+      gap: 32px
+      a.active
+        opacity: 1
+        &::after
+          content: ''
+          position: absolute
+          bottom: -15px  
+          left: 0
+          width: 100%
+          background: linear-gradient(260deg, #3B6DEC 0%, rgba(255, 0, 229, 0.5) 95.28%)
+          height: 3px
+      a
+        position: relative
+        font-size: 18px
+        font-weight: 400
+        line-height: 140%
+        display: flex
+        align-items: center
+        gap: 16px
+        align-self: stretch
+        color: white
+        opacity: 0.4000000059604645
+        &:hover
+          opacity: 1
+        svg
+          path
+            stroke: white
+    .icon-group
+      display: inline-flex
+      gap: 24px
+      align-items: center
+      padding-right: 32px
+      .cart
+        position: relative
+        .blob
+          position: absolute
+          width: 14px
+          height: 14px
+          top: -2px
+          right: -7px
+          font-size: 10px
+          font-weight: 500
+          display: inline-flex
+          padding: 2px
+          justify-content: center
+          align-items: center
+          border-radius: 1000px
+          background: #BF1919
+          color: white
+    .button
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      color: #FFF
+      padding: 10px 20px
+      font-size: 16px
+      font-weight: 400
+      border-radius: 12px
+      border: 1px solid $primary1
+      &:hover
+        background: $primary1
+
+
+.mobile-menu.active
+  opacity: 1
+  pointer-events: all
+  z-index: 9999
+  overflow: scroll
+
+body.active
+  overflow: hidden
+
+.mobile-menu
+  transition: all 0.3s ease
+  position: absolute
+  left: 0
+  z-index: -9999
+  opacity: 0
+  pointer-events: none
+  height: calc(100vh - 128.8px)
+  top: 128.8px
+  width: 100vw
+  background: $primary2
+  .chapter
+    gap: 32px
+    margin-bottom: 40px
+    margin-top: 26px
+    a.active
+      opacity: 1
+      &::after
+        content: ''
+        position: absolute
+        bottom: -11px  
+        left: 0
+        width: 100%
+        background: linear-gradient(260deg, #3B6DEC 0%, rgba(255, 0, 229, 0.5) 95.28%)
+        height: 3px
+    a
+      position: relative
+      font-size: 12px
+      font-weight: 400
+      line-height: 140%
+      display: flex
+      align-items: center
+      gap: 16px
+      align-self: stretch
+      color: white
+      opacity: 0.4000000059604645
+      &:hover
+        opacity: 1
+      svg
+        width: 16px
+        height: 16px
+        path
+          stroke: white
+
+
+.mobile-fix
+  padding-top: 8px
+  padding-bottom: 8px
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100vw
+  border-top: 1px solid $lightblue
+  background: $primary1
+  z-index: 8888
+  // height: 40px
+  a
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    gap: 3px
+    color: white
+    font-size: 10px
+    font-weight: 400
+    line-height: 140%
+    position: relative
+    .blob
+      position: absolute
+      top: -3px
+      right: 6px
+      color: white
+      font-size: 6.25px
+      font-weight: 500
+      display: inline-flex
+      padding: 1.25px 0.75px 0.75px 1.25px
+      justify-content: center
+      align-items: center
+      border-radius: 625px
+      background: #C52323
+      height: 8px
+      width: 8px
+
+
+.catalog_menu.active
+  opacity: 1
+  pointer-events: all
+  z-index: 9999
+
+.catalog_menu_layer.active
+  opacity: 1
+  pointer-events: all
+  z-index: 9998
+  position: absolute
+  width: 100%
+  height: 100%
+  // background: red
+  top: 0
+  left: 0
+
+
+.catalog_menu
+  transition: all 0.3s ease
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  z-index: -9999
+  opacity: 0
+  pointer-events: none
+  min-height: 470px
+  top: 70px
+  min-width: 930px
+  padding: 32px 32px 32px 0px
+  background: $primary2
+  border-radius: 32px
+  background: $primary1
+  .title
+    color: #FFF
+    font-size: 32px
+    font-weight: 500
+    line-height: normal
+    padding-left: 32px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .catalog-close
+      &:hover
+        cursor: pointer
+  span
+    padding: 0 0 0 32px
+    display: flex
+  hr
+    background: rgba(255, 255, 255, 0.30)
+    margin-bottom: 24px
+    margin-top: 32px
+    border: none
+    width: 100%
+    padding-left: 32px
+    padding-right: 32px
+    height: 1px
+  .wrapper
+    display: flex
+  .titles
+    border-right: 1px solid rgba(255, 255, 255, 0.30)
+    padding-right: 32px
+    max-width: 320px
+    width: 100%
+    a
+      color: #FFF
+      font-size: 18px
+      font-weight: 500
+      line-height: 140%
+      display: flex
+      height: 72px
+      padding: 24px 24px 24px 32px
+      align-items: center
+      gap: 16px
+      align-self: stretch
+      border-left: 2px solid rgba(255, 255, 255, 0.0)
+      &:hover
+        border-left: 2px solid #FFF
+  .content
+    .active
+      opacity: 1
+      pointer-events: all
+      z-index: 1
+      display: inline-flex
+  .content
+    padding: 24px 0 24px 32px
+    >div
+      opacity: 0
+      z-index: -1
+      pointer-events: none
+      display: none
+      gap: 32px 0
+      flex-wrap: wrap
+      a
+        color: #FFF
+        font-size: 16px
+        font-weight: 400
+        line-height: 140%
+        display: inline-flex
+        gap: 4px
+        align-items: center
+        width: calc((100% - 32px - 32px) / 3)
+        max-width: 200px
+        span
+          color: rgba(255, 255, 255, 0.50)
+          font-size: 16px
+          font-weight: 400
+          line-height: 140%
+          padding: 0
+
+.search-form_layer.active
+  opacity: 1
+  pointer-events: all
+  z-index: 9998
+  position: absolute
+  width: 100%
+  height: 100%
+  // background: red
+  top: 0
+  left: 0
+.searchform.active
+  opacity: 1
+  pointer-events: all
+  z-index: 9999
+
+.searchform
+  border-radius: 16px
+  transition: all 0.3s ease
+  background: $primary1
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  z-index: -9999
+  opacity: 0
+  min-height: auto
+  top: 200px
+  min-width: 1140px
+  .full-button
+    display: flex
+    padding: 19px
+    justify-content: center
+    align-items: center
+    gap: 8px
+    align-self: stretch
+    border-radius: 0px 0px 16px 16px
+    background: $hoverblue
+    color: white
+    font-size: 24px
+    font-weight: 500
+    line-height: 140%
+  .tabs
+    padding-bottom: 12px
+    border-bottom: 1px solid $lightblue
+    display: none
+    justify-content: center
+    align-items: flex-end
+    gap: 32px
+    .item.active
+      color: white
+      font-size: 24px
+      font-weight: 500
+      &::after
+        content: ''
+        width: 100%
+        height: 3px
+        background: white
+        left: 0
+        bottom: -12px
+        display: block
+        position: absolute
+        border-radius: 5px
+    .item
+      color: $lightblue2
+      font-size: 20px
+      font-weight: 400
+      line-height: 140%
+      position: relative
+      &:hover
+        cursor: pointer
+  .wrapper
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 24px
+    align-self: stretch
+    padding: 24px
+    width: 100%
+  .title
+    color: white
+    font-size: 24px
+    font-weight: 500
+    line-height: 140%
+  hr
+    width: 100%
+    background: $lightblue
+    height: 1px
+    border: none
+    margin: 0
+    opacity: 1
+  .tag-swicther
+    color: white
+    font-size: 12px
+    font-weight: 400
+    line-height: 140%
+    display: flex
+    width: 100%
+    padding: 13px 16px
+    justify-content: space-between
+    align-items: center
+    border-radius: 53px
+    background: $primary1
+  .tags
+    display: flex
+    width: 100%
+    align-items: flex-start
+    gap: 16px
+    position: relative
+    .scroll-line
+      display: flex
+      width: 100%
+      align-items: flex-start
+      gap: 16px
+      overflow-x: auto
+      padding-right: 50px
+      &::-webkit-scrollbar
+        display: none
+    .scroller
+      height: 100%
+      width: auto
+      right: 0
+      top: 20%
+      transform: translateY(-50%)
+      position: absolute
+    .tag
+      flex: 0 0 auto
+      display: flex
+      padding: 10px 16px
+      justify-content: center
+      align-items: center
+      gap: 10px
+      border-radius: 8px
+      width: auto
+      background: $nightblue2
+      color: white
+      text-align: center
+      font-size: 14px
+      font-weight: 400
+      line-height: 140%
+  .news
+    margin: 0
+  .products, .news, .articles
+    width: 100%
+    gap: 16px
+    display: flex
+    flex-direction: column
+    .line
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      padding-bottom: 16px
+      border-bottom: 1px solid $lightblue
+      span
+        display: flex
+        gap: 24px
+        img
+          width: 80px
+          height: 80px
+          border-radius: 12px
+        .button
+          display: flex
+          padding: 14px 40px
+          justify-content: center
+          align-items: center
+          gap: 10px
+          align-self: stretch
+          border-radius: 12px
+          border: 1px solid $lightblue
+          color: white
+          font-size: 16px
+          font-weight: 500
+          line-height: 140%
+        .rate
+          display: flex
+          align-items: center
+          gap: 4px
+          color: white
+          font-size: 16px
+          font-weight: 400
+          line-height: 140%
+        >div
+          display: flex
+          flex-direction: column
+          justify-content: flex-end
+          align-items: flex-start
+          gap: 8px
+          .name, a
+            color: white
+            font-size: 18px
+            font-weight: 400
+            line-height: 140%
+          .price
+            color: white
+            font-size: 24px
+            font-weight: 500
+            line-height: 140%
+  .content-type.active
+    display: flex
+  .content-type
+    display: none
+    .empty
+      position: relative
+      img
+        position: absolute
+        bottom: -24px
+        right: 0
+        max-height: 450px
+      span
+        width: 60%
+        display: flex
+        padding: 40px
+        flex-direction: column
+        align-items: flex-start
+        gap: 16px
+        margin-bottom: 200px
+        .title
+          color: white
+          font-size: 32px
+          font-weight: 500
+          line-height: 120%
+        .subtitle
+          color: $lightblue2
+          font-size: 20px
+          font-weight: 400
+          line-height: 140%

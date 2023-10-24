@@ -1,0 +1,87 @@
+.single-news
+  background-image: url(../images/dist/layer_1.png) 
+  background-repeat: repeat-y
+  background-position: top left
+  min-height: 100%
+  border-radius: 0px
+  padding-bottom: 64px
+  .hero
+    position: relative
+    border-radius: 32px
+    overflow: hidden
+    margin-bottom: 64px
+    .tag.red
+      background: #BF1919
+    .tag
+      position: absolute
+      display: flex
+      top: 0
+      left: 0
+      width: 140px
+      height: 32px
+      justify-content: center
+      align-items: center
+      gap: 10px
+      flex-shrink: 0
+      border-radius: 32px 0px
+      background: $primary1
+      color: #FFF
+      text-align: center
+      font-size: 14px
+      font-weight: 400
+    img
+      width: 100%
+      margin: 0 !important
+      border: none
+    >span
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 100%
+    h1
+      text-align: center
+      color: white
+      margin-bottom: 24px
+    .info
+      display: flex
+      justify-content: space-between
+      width: 120px
+      .date
+        color: $lightblue
+        font-size: 18px
+        font-weight: 400
+        line-height: 140%
+      .likes
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        gap: 5px
+        color: rgba(156, 171, 255, 0.60)
+        text-align: center
+        font-size: 14px
+        font-weight: 400
+        line-height: 140%
+  .content
+    p
+      margin-bottom: 24px
+      color: rgba(255, 255, 255, 0.60)
+      font-size: 18px
+      font-weight: 400
+      line-height: 140%
+    h2
+      margin-top: 64px
+      margin-bottom: 24px
+      color: white
+    img
+      margin-top: 40px
+      width: 100%
+      border-radius: 32px
+  .more_news
+    h1
+      color: white
+      margin-top: 80px
+      margin-bottom: 40px

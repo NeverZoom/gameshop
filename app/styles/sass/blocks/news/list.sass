@@ -1,0 +1,96 @@
+.news-page
+  background-image: url(../images/dist/layer_1.png) 
+  background-repeat: repeat-y
+  background-position: top left
+  min-height: 100%
+  border-radius: 0px
+  padding-bottom: 64px
+  h1
+    color: white
+    margin-bottom: 40px
+  .content_catalog.active
+    display: flex
+  .content_catalog
+    display: none
+    .item
+      margin-bottom: 30px
+      &:nth-child(1)
+        .news_card
+          border-radius: 24px 24px 0 0
+          img
+            height: 400px
+            border-radius: 24px
+            margin-bottom: 0px
+          .tag
+            width: 217px
+            height: 41px
+            border-radius: 24px 0px
+            background: $primary1
+            font-size: 14px
+          .name
+            position: absolute
+            margin-bottom: 0
+            z-index: 2
+            bottom: 91px
+            width: calc(100% - 80px)
+            left: 40px
+          span
+            position: absolute
+            width: calc(100% - 80px)
+            z-index: 2
+            left: 40px
+            bottom: 42px
+      &:nth-child(2)
+        .news_card
+          border-radius: 24px 24px 0 0
+          img
+            height: 225px
+            border-radius: 24px
+          .tag
+            border-radius: 24px 0px
+  .buttonmore
+    padding: 18px
+    border-radius: 16px
+    font-size: 18px
+    background: none
+    border: 1px solid $lightblue
+    margin-bottom: 24px
+  .show_count
+    display: flex
+    align-items: center
+    gap: 8px
+    color: white
+    font-size: 18px
+    font-weight: 400
+    line-height: 140%
+    &:hover
+      cursor: pointer
+  .tabs
+    margin-top: 24px
+    margin-bottom: 40px
+    display: flex
+    gap: 32px
+    .tab.active
+      color: white
+      &:hover
+        color: white
+      &::after
+        content: ''
+        border-radius: 60px
+        background: $primary1
+        height: 3px
+        position: absolute
+        bottom: -8px
+        left: 0
+        width: 100%
+    .tab
+      position: relative
+      color: rgba(156, 171, 255, 0.60)
+      font-size: 20px
+      font-weight: 500
+      line-height: 140%
+      &:hover
+        color: $lightblue
+        cursor: pointer
+      span
+        color: $lightblue

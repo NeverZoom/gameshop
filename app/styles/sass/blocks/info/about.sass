@@ -1,0 +1,133 @@
+.about-page
+  background-image: url(../images/dist/layer.png) 
+  background-repeat: repeat-y
+  background-position: top left
+  min-height: 100%
+  border-radius: 0px
+  padding-bottom: calc(64px - 16px)
+  h1
+    color: white
+    margin-bottom: 44px
+  .hero
+    background-size: cover
+    background-position: center center
+    border-radius: 32px
+    height: 520px
+    width: 100%
+    position: relative
+    margin-bottom: 176px
+    .logo
+      position: absolute
+      left: 50%
+      top: 32px
+      transform: translateX(-50%)
+    .banner
+      max-width: 748px
+      position: absolute
+      left: 50%
+      bottom: -18%
+      transform: translateX(-50%)
+      color: white
+      text-align: center
+      font-size: 24px
+      font-weight: 500
+      line-height: 140%
+      display: inline-flex
+      padding: 32px
+      justify-content: center
+      align-items: center
+      gap: 10px
+      border-radius: 32px
+      background: $primary1
+  .advantage
+    padding-bottom: 64px
+    h1
+      margin-bottom: 48px
+    .col-xl-4
+      &:nth-child(2), &:nth-child(3), &:nth-child(4)
+        border-bottom: 1px solid $lightblue
+      &:nth-child(3), &:nth-child(6)
+        border-left: 1px solid $lightblue
+        border-right: 1px solid $lightblue
+    .block
+      display: flex
+      gap: 24px
+      padding: 24px 0
+      svg
+        width: 48px
+      span
+        display: flex
+        flex-direction: column
+        width: calc(100% - 48px - 24px)
+        gap: 16px
+        .title
+          color: white
+          font-size: 24px
+          font-weight: 500
+          line-height: 140%
+        p
+          color: rgba(255, 255, 255, 0.60)
+          font-size: 20px
+          font-weight: 400
+          line-height: 140%
+          b
+            font-weight: 500
+            color: white
+  .advantage-plus
+    background: $primary2
+    padding: 64px 0
+    .row
+      .col-xl-6
+        &:last-child
+          .block
+            background: $hoverblue
+            .button
+              background: none
+    .block
+      border-radius: 32px
+      background: $primary1
+      display: flex
+      height: 400px
+      padding: 48px
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      overflow: hidden
+      position: relative
+      span
+        position: relative
+        z-index: 2
+      img
+        z-index: 1
+        position: absolute
+        right: 0
+        bottom: 0
+      h1
+        color: white
+        margin-bottom: 24px
+      p
+        color: rgba(255, 255, 255, 0.60)
+        font-size: 20px
+        font-weight: 400
+        line-height: 140%
+      .button
+        z-index: 2
+        position: relative
+        border-radius: 16px
+        background: $hoverblue
+        color: white
+        font-size: 20px
+        font-weight: 500
+        line-height: 140%
+        display: flex
+        min-width: 354px
+        padding: 18px 24px
+        justify-content: center
+        align-items: center
+  .payments
+    background: none
+    padding-bottom: 0 !important
+    padding-top: 64px
+    h1
+      margin-bottom: 48px
+      

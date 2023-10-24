@@ -1,0 +1,112 @@
+.card.layout
+  display: flex
+  .lay
+    display: none
+  .img
+    margin-bottom: 24px
+    border-radius: 24px
+    width: 100%
+    height: 330px
+    background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+    animation: skeleton 1500ms infinite
+    background-size: 400%
+  .name
+    background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+    animation: skeleton 1500ms infinite
+    background-size: 400%
+    border-radius: 4px
+    height: 25px
+    width: 90%
+  .price
+    .sale
+      background-color: transparent
+      background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+      animation: skeleton 1500ms infinite
+      background-size: 400%
+      border-radius: 4px
+      height: 35px
+      width: 60px
+    .lastprice
+      background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+      animation: skeleton 1500ms infinite
+      background-size: 400%
+      border-radius: 4px
+      height: 25px
+      width: 110px
+
+
+@keyframes skeleton
+  from
+    background-position: 100% 100%
+  to
+    background-position: 0 0
+
+
+
+.product-card_list.layout
+  display: flex
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20)
+  .column
+    .img
+      background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+      animation: skeleton 1500ms infinite
+      background-size: 400%
+      height: 315px
+      width: 230px
+      border-radius: 24px
+  .column-2
+    .name
+      height: 34px
+      width: 40%
+      background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+      animation: skeleton 1500ms infinite
+      background-size: 400%
+      border-radius: 4px
+    .wrapper
+      .line
+        color: rgba(255, 255, 255, 0.60)
+        align-items: center
+        max-width: 80%
+        .iconsvg
+          margin-left: 8px
+          width: 24px
+          height: 24px
+          background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+          animation: skeleton 1500ms infinite
+          background-size: 400%
+          border-radius: 4px
+        span
+          height: 25px
+          width: 90px
+          background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+          animation: skeleton 1500ms infinite
+          background-size: 400%
+          border-radius: 4px
+  .column-3
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .button 
+      background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+      animation: skeleton 1500ms infinite
+      background-size: 400%
+      height: 55px
+      padding: 0px
+      border-radius: 12px
+      background-color: transparent
+      width: 230px
+    .price
+      .sale
+        width: 70px
+        height: 40px
+        background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+        animation: skeleton 1500ms infinite
+        background-size: 400%
+        background-color: transparent
+      .lastprice, .newprice
+        background-image: linear-gradient(90deg,rgba($primary1, 0.5) 0%, rgba($primary1, 0.5) 40%,rgba($hoverblue, 0.4) 50%, rgba($hoverblue, 0.4) 55%,rgba($primary1, 0.5) 65%, rgba($primary1, 0.5) 100%)
+        animation: skeleton 1500ms infinite
+        background-size: 400%
+        width: 75px
+        height: 33px
+        border-radius: 4px

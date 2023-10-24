@@ -1,0 +1,55 @@
+.catalog-page-slider
+  h1
+    color: white
+    margin-bottom: 69px
+  .catalog-cat
+    position: relative
+    h2
+      margin-bottom: 34px
+      color: white
+  .catalog-cat-slider
+    position: unset
+    margin-bottom: 48px
+    .slick-slide
+      &:hover
+        cursor: pointer
+      >div
+        margin: 0 16px
+    .slick-arrow
+      width: 48px
+      height: 48px
+      top: 0
+      transform: none
+      rect, path
+        transition: all 0.3s ease
+      &:hover
+        rect
+          fill: $primary1
+        path
+          stroke: white
+    .slick-prev
+      left: auto
+      right: 80px
+    .slick-next
+      right: 16px
+  .cat-card
+    height: 350px
+    border-radius: 40px
+    background-size: cover
+    background-position: center center
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: flex-end
+    padding: 32px
+    .name
+      color: white
+      font-size: 24px
+      font-weight: 500
+      line-height: 140%
+      margin-bottom: 8px
+    .link
+      color: rgba(255, 255, 255, 0.60)
+      font-size: 18px
+      font-weight: 400
+      line-height: 140%

@@ -1,0 +1,3953 @@
++media-breakpoint-up(xs)
+  h1.inter
+    font-size: 20px
+    line-height: 120%
+    font-weight: 500
+    font-family: $inter
+  h1.regular
+    font-family: $roboto
+    font-size: 20px
+    font-weight: 500
+    line-height: 150%
+  h2.inter
+    font-family: $inter
+    font-size: 18px
+    font-weight: 500
+    line-height: 140%
+  h2.regular
+    font-family: $roboto
+    font-size: 18px
+    font-weight: 400
+    line-height: 140%
+  p
+    font-family: $inter
+    font-size: 16px
+    line-height: 140%
+  p.middle
+    font-family: $inter
+    font-size: 14px
+    line-height: 140%
+  p.small
+    font-family: $inter
+    font-size: 12px
+    line-height: 140%
+  .lil
+    font-family: $inter
+    font-size: 10px
+    font-weight: 400
+    line-height: 140%
+  .top-line
+    .logo
+      display: block
+      width: 90px
+      img
+        object-fit: contain
+        max-width: 100%
+        max-height: 65px
+      svg
+        width: 100%
+    .main
+      padding: 20px 0 14px 0
+      .search
+        width: 100%
+        max-width: 10000px
+        margin-top: 20px
+        label
+          input
+            padding: 8px 15px
+            border-radius: 8px
+            color: white
+            font-size: 12px
+            &::placeholder
+              color: white  
+              font-size: 12px
+          button.icon
+            right: 15px
+            top: 2px
+            svg
+              width: 16px
+              height: 16px
+  .main-content
+    border-radius: 16px
+    padding-top: 15px
+    padding-bottom: 15px
+    >.row
+      padding-left: 0
+      padding-right: 0
+  .hero
+    margin-bottom: 80px
+    .slider-wrapper
+      .pagingInfo
+        display: none
+    .slider
+      .slide
+        height: auto
+    .slider_first
+      margin-bottom: 90px !important
+      .slide
+        min-height: 370px
+      .slick-slide
+        >div
+          margin-right: 0px
+      .slide
+        border-radius: 16px
+        padding: 15px
+        img.logo
+          width: 100%
+          height: auto
+          position: relative
+          z-index: 2
+          margin-top: 20%
+        p
+          max-width: 100%
+          font-size: 10px
+          position: relative
+          z-index: 2
+        span
+          gap: 12px
+          justify-content: center
+          align-items: flex-end
+          flex-wrap: wrap-reverse
+          .button
+            font-size: 16px
+            height: 48px
+            padding: 10px 24px
+            width: 100%
+            gap: 10px
+            border-radius: 12px
+          .price
+            gap: 8px
+            align-items: center
+            .sale
+              font-size: 14px
+              padding: 5px 8px
+              border-radius: 8px
+            .lastprice
+              font-size: 14px
+            .newprice
+              font-size: 14px
+        img.main
+          left: 20%
+          top: -2%
+          width: 70%
+      .slick-arrow
+        top: auto
+        transform: none
+        width: 40px
+        height: 40px
+      .slick-next
+        bottom: -52px
+        right: 0px
+      .slick-prev
+        bottom: -52px
+        left: 0
+        right: auto
+      .slick-dots
+        display: block !important
+        bottom: -52px
+        li.slick-active
+          button
+            background: $primary1
+            &::before
+              color: $primary1
+        li
+          button
+            width: 12px
+            height: 12px
+            background:$lightblue
+            border-radius: 100%
+            color: $lightblue
+            transition: all 0.3s ease
+            &::before
+              transition: all 0.3s ease
+              color: $lightblue
+    .slider_second
+      .slick-arrow
+        width: 40px
+        height: 40px
+        transform: none
+      .slick-next
+        top: auto
+        bottom: -52px
+        right: 0px
+      .slick-prev
+        top: auto
+        bottom: -52px
+        left: 0
+      .slick-dots
+        display: block !important
+        bottom: -52px
+        li.slick-active
+          button
+            background: $primary1
+            &::before
+              color: $primary1
+        li
+          button
+            width: 12px
+            height: 12px
+            background:$lightblue
+            border-radius: 100%
+            color: $lightblue
+            transition: all 0.3s ease
+            &::before
+              transition: all 0.3s ease
+              color: $lightblue
+      .slide
+        border-radius: 16px
+        height: 200px
+  .catalog-slider
+    margin-top: 50px
+    h1
+      margin-bottom: 32px
+  .card
+    .lay
+      font-size: 16px
+      border-radius: 16px 16px 5px 5px
+      display: none
+      height: calc(100% - 16px)
+    img
+      margin-bottom: 16px
+      border-radius: 16px
+    .name
+      margin-bottom: 22px
+      font-size: 12px
+    .price
+      gap: 8px
+      align-items: flex-end
+      flex-wrap: wrap
+      .sale
+        font-size: 12px
+        padding: 5px 8px
+        gap: 10px
+        border-radius: 8px
+      .lastprice
+        font-size: 12px
+      .newprice
+        font-size: 14px
+        display: block
+        width: 100%
+        margin-bottom: 15px
+  .banner
+    margin-top: 32px
+  .catalog-tabs
+    margin-top: 37px
+    span
+      >a
+        font-size: 12px
+    .content_catalog
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+      grid-template-areas: ". ." ". ." ". ." ". ." ". ." ". ."
+      gap: 13px 13px
+    .tabs
+      margin-top: 22px
+      margin-bottom: 23px
+      display: flex
+      flex-wrap: wrap
+      gap: 24px
+      .tab
+        font-size: 12px
+    .pagination
+      margin-top: 48px
+      display: none
+      ul
+        gap: 8px
+        li
+          a
+            font-size: 18px
+            width: 40px
+            height: 40px
+  .news
+    margin-top: 48px
+    h1
+      margin-bottom: 32px
+  .news_card
+    border-radius: 16px 16px 0 0
+    margin-bottom: 15px
+    img
+      height: 180px
+      border-radius: 16px
+      margin-bottom: 16px
+    .tag
+      width: 96.473px
+      height: 28.802px
+      border-radius: 16px 0px
+      font-size: 12px
+    .name
+      font-size: 16px
+      margin-bottom: 16px
+    span
+      .date
+        font-size: 12px
+      .likes
+        font-size: 12px
+  .form
+    margin-top: 20px
+    .wrapper
+      border-radius: 16px
+      padding: 15px
+      height: auto
+      background-image: url(../images/dist/form_m.png)
+      img
+        position: relative
+        right: 0
+        bottom: 0
+        max-width: 100%
+      h1, form
+        width: 100%
+      form
+        span
+          display: block
+          font-size: 12px
+          a
+            font-size: 12px
+        label
+          margin-bottom: 12px
+          input
+            height: 48px
+            padding: 10px 8px 10px 15px
+            border-radius: 12px
+            font-size: 14px
+          button
+            right: 8px
+  footer
+    margin-top: 32px
+    margin-bottom: calc(34px + 40px)
+    .payments
+      margin-top: 32px
+      h3
+        margin-bottom: 24px
+        font-size: 16px
+      span
+        gap: 17px
+    .links
+      flex-direction: column
+      align-items: flex-start
+      margin-top: 24px
+      gap: 24px
+      a
+        font-size: 12px
+  .catalog
+    border-radius: 16px
+    // background-size: contain
+  .breadcrumbs
+    gap: 8px 28px
+    padding: 15px 0 40px 0
+    a
+      font-size: 12px
+      &::after
+        right: -20px
+        width: 12px
+    span
+      font-size: 12px
+  .catalog-page-slider
+    h1
+      margin-bottom: 32px
+    .catalog-cat
+      h2
+        margin-bottom: 24px
+      .buttonmore
+        margin-top: 0
+        margin-bottom: 32px
+    .catalog-cat-slider
+      margin-bottom: 0px
+    .cat-card
+      height: 180px
+      border-radius: 16px
+      padding: 16px
+      margin-bottom: 15px
+      .name
+        font-size: 16px
+        margin-bottom: 4px
+      .link
+        font-size: 10px
+  .product-card_list.active
+    display: none
+  .catalog_menu
+    display: none
+  .catalog-filter
+    .catalog-footer
+      padding-bottom: 15px
+    h1.inter
+      gap: 8px
+      margin-bottom: 32px
+      span
+        font-size: 12px
+    .col-xl-3
+      margin-bottom: 0px
+    .search
+      display: none
+    .block
+      border-radius: 8px
+      padding: 12px 16px 12px 16px
+      margin-bottom: 0px
+      .title
+        font-size: 14px
+        svg
+          width: 16px
+          height: 16px
+        span
+          margin-left: 8px
+          font-size: 12px
+      .wrapper
+        gap: 4px
+        margin-bottom: 30px
+        .line
+          max-width: 24px
+      #range1, #range2, #range3, #range4
+        border-radius: 12px
+        height: 40px
+        padding: 11px 16px
+        font-size: 12px
+      .container 
+        margin-bottom: 10px
+        .slider-track
+          height: 2px
+        input[type="range"]::-ms-track
+          height: 2px
+        input[type="range"]::-webkit-slider-thumb
+          height: 16px
+          width: 16px
+      .switcher_ui.active
+        &::after
+          left: calc(100% - 14px)
+      .switcher_ui
+        width: 40px
+        height: 16px
+        border-radius: 100px
+        &::after
+          width: 12px
+          height: 12px
+          border-radius: 12px
+          left: 2px
+          top: 2px
+      .content
+        margin-top: 24px
+      .checkbox-list
+        a.more
+          font-size: 20px
+          margin-top: 8px
+        label
+          font-size: 12px
+          gap: 8px
+          margin-bottom: 8px
+          svg
+            width: 16px
+            height: 16px
+    .buttonmore
+      padding: 14px
+      border-radius: 12px
+      font-size: 14px
+      margin-bottom: 16px
+    .show_count
+      gap: 8px
+      font-size: 12px
+    .cats
+      border-radius: 8px
+      margin-bottom: 8px
+      .list
+        padding: 16px
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 16px
+        .buttons
+          gap: 4px
+          flex-wrap: wrap
+          .button
+            font-size: 10px
+            height: 32px
+            padding: 0px 16px
+            gap: 10px
+        .more
+          font-size: 10px
+          gap: 4px
+      .sort
+        padding: 16px
+        .popular
+          font-size: 12px
+          gap: 8px
+        .view
+          display: none
+          gap: 8px
+    .tabs_list
+      gap: 4px
+      margin-bottom: 8px
+      flex-wrap: wrap
+      .tab
+        font-size: 10px
+        padding: 9px
+        gap: 8px
+        width: calc(50% - 4px)
+        border: none
+        background: $primary1
+        svg
+          width: 16px
+          height: 16px
+  .pagination
+    margin-bottom: 10px
+    ul
+      flex-wrap: wrap
+      li
+        a
+          font-size: 12px
+          width: 24px
+          height: 24px
+          border-radius: 8px  
+  .product-card
+    padding-bottom: 15px
+    border-radius: 16px
+    h1
+      margin-bottom: 24px
+    .buy_type
+      gap: 16px
+      margin-bottom: 16px
+      .button
+        width: 100%
+        font-size: 12px
+        justify-content: space-between
+        height: 40px
+        padding: 0px 16px
+        gap: 8px
+        border-radius: 12px
+        span
+          display: flex
+          align-items: center
+          gap: 8px
+          svg
+            width: 12px
+            height: 12px
+    .type-info
+      margin-bottom: 22px
+      padding: 16px
+      gap: 8px
+      border-radius: 8px
+      svg
+        width: 32px
+        height: 32px
+      span
+        width: calc(100% - 32px - 16px)
+        font-size: 12px
+    .product_image
+      margin-bottom: 16px
+    .tag
+      margin-bottom: 8px
+      padding: 4px 16px
+      gap: 10px
+      border-radius: 7px
+      font-size: 12px
+    .price
+      gap: 8px
+      margin-bottom: 8px
+      .sale
+        font-size: 12px
+        padding: 4px 16px
+        gap: 10px
+        border-radius: 7px
+      .lastprice
+        font-size: 12px
+        margin-left: 8px
+      .newprice
+        font-size: 12px
+    .action
+      margin-bottom: 16px
+      font-size: 14px
+    .button.buy, .button.cart, .button.wishlist, .button.delwishlist
+      padding: 14px
+      gap: 10px
+      border-radius: 8px
+      font-size: 14px
+      margin-bottom: 8px
+    ul
+      margin: 8px 0 32px 0
+      li
+        height: 48px
+        padding: 10px 0px
+        font-size: 14px
+        span
+          font-size: 14px
+          gap: 16px
+          img
+            width: 24px
+            height: 24px
+            object-fit: contain
+    .product-main-slider
+      margin-bottom: 24px
+      .slider-for
+        margin-bottom: 16px
+        img
+          height: auto
+          border-radius: 12px
+      .slider-nav
+        img
+          width: calc(100% - 8px)
+          border-radius: 8px
+    p.description
+      margin-bottom: 32px
+      font-size: 16px
+    h4
+      margin-bottom: 24px
+      font-size: 16px
+    p.max, ol li
+      font-size: 16px
+      margin-bottom: 16px
+    .photo-slider
+      display: flex
+      flex-wrap: wrap
+      gap: 32px
+      margin-bottom: 88px
+      margin-top: 32px
+      div
+        img
+          width: 100%
+        &:first-child, &:nth-child(2), &:nth-child(4), &:nth-child(5)
+          width: 100%
+          img
+            border-radius: 16px
+        &:nth-child(3)
+          width: 100%
+          img
+            border-radius: 16px
+    h3
+      margin-bottom: 24px
+    .system
+      padding: 15px
+      gap: 16px
+      border-radius: 16px
+      .title
+        font-size: 12px
+      p
+        font-size: 12px
+    .case
+      margin-bottom: 16px
+      h1
+        margin-bottom: 24px
+      img
+        border-radius: 12px
+        margin-bottom: 8px
+        height: 140px
+      .name
+        font-size: 14px
+        margin-bottom: 16px
+  .servs
+    .wrapper
+      border-radius: 16px
+      h1
+        margin-bottom: 32px
+      .catalog-filter
+        .cats
+          border-radius: 8px
+          margin-bottom: 8px
+    .col-xl-3.col-6
+      margin-bottom: 15px
+  .single-serv
+    .hero_img
+      margin-bottom: 24px
+      img
+        height: 232px
+        border-radius: 12px
+  .faq
+    gap: 16px
+    .item.active
+      .title
+        border-radius: 12px 12px 0px 0px
+    .item
+      .title
+        padding: 6px 15px
+        font-size: 16px
+        border-radius: 12px
+        svg
+          width: 16px
+          height: 16px
+      .content
+        padding: 15px
+        border-radius: 0px 0px 16px 16px
+        font-size: 12px
+  .pay
+    border-radius: 16px
+    h1
+      margin-bottom: 32px
+    .item.right
+      align-items: flex-start
+    .item
+      margin-bottom: 24px
+      .step
+        font-size: 16px
+        border-radius: 8px
+        padding: 5px 16px
+        gap: 10px
+        margin-bottom: 8px
+      p
+        font-size: 12px
+        margin-bottom: 16px
+      img
+        border-radius: 16px
+  .payments
+    padding-bottom: 0
+    border-radius: 16px
+    h1
+      margin-bottom: 16px
+    .subtitle
+      margin-bottom: 32px
+      font-size: 14px
+    .block
+      height: 137px
+      gap: 11px
+      border-radius: 16px
+      margin-bottom: 16px
+      padding: 27px
+      svg
+        max-width: 100%
+  .info-page
+    border-radius: 16px
+    padding-bottom: 0
+    h1
+      margin-bottom: 16px
+    p
+      margin-bottom: 8px
+      font-size: 14px
+  .about-page
+    border-radius: 16px
+    padding-bottom: 0
+    h1
+      margin-bottom: 32px
+    .hero
+      background-size: cover
+      border-radius: 16px
+      height: 200px
+      margin-bottom: 130px
+      .logo
+        top: 17px
+      .banner
+        max-width: 260px
+        bottom: -45%
+        font-size: 14px
+        padding: 16px
+        border-radius: 16px
+    .advantage
+      padding-bottom: 32px
+      h1
+        margin-bottom: 48px
+      .col-xl-4
+        &:nth-child(2), &:nth-child(3), &:nth-child(4)
+          border-bottom: none
+        &:nth-child(3), &:nth-child(6)
+          border-left: none
+          border-right: none
+      .block
+        border-bottom: 1px solid $lightblue
+        gap: 16px
+        padding: 16px
+        svg
+          width: 40px
+        span
+          width: calc(100% - 40px - 16px)
+          gap: 8px
+          .title
+            font-size: 16px
+          p
+            font-size: 12px
+    .advantage-plus
+      padding: 32px 0
+      .row
+        .col-xl-6
+          &:last-child
+            .block
+              margin-bottom: 0
+              img
+                width: auto
+      .block
+        border-radius: 16px
+        padding: 16px
+        height: 440px
+        margin-bottom: 32px
+        img
+          position: absolute
+          right: 0
+          bottom: 0
+          width: 100%
+          height: 57%
+        h1
+          margin-bottom: 8px
+        p
+          font-size: 14px
+        .button
+          border-radius: 12px
+          font-size: 16px
+          min-width: 100%
+          padding: 13px 24px
+    .payments
+      padding-top: 32px
+      h1
+        margin-bottom: 32px
+  .news-page
+    border-radius: 16px
+    padding-bottom: 15px
+    h1
+      margin-bottom: 32px
+    .content_catalog
+      .item
+        margin-bottom: 15px
+        &:nth-child(1)
+          .news_card
+            border-radius: 16px 16px 0 0
+            img
+              height: 180px
+              border-radius: 16px
+              margin-bottom: 16px
+            .tag
+              width: 96px
+              height: 28px
+              border-radius: 16px 0px
+              font-size: 12px
+            .name
+              position: relative
+              margin-bottom: 16px
+              bottom: auto
+              width: calc(100% - 0px)
+              left: auto
+            span
+              position: relative
+              width: calc(100% - 0px)
+              left: auto
+              bottom: auto
+        &:nth-child(2)
+          .news_card
+            border-radius: 16px 16px 0 0
+            img
+              height: 180px
+              border-radius: 16px
+            .tag
+              border-radius: 16px 0px
+    .buttonmore
+      padding: 14px
+      border-radius: 12px
+      font-size: 14px
+      background: $primary1
+      border: none
+      margin-bottom: 16px
+    .show_count
+      gap: 8px
+      font-size: 12px
+    .tabs
+      margin-top: 0px
+      margin-bottom: 40px
+      gap: 24px
+      .tab.active
+        &::after
+          border-radius: 60px
+          height: 3px
+          bottom: -8px
+      .tab
+        font-size: 14px
+  .single-news
+    border-radius: 16px
+    padding-bottom: 0px
+    .hero
+      border-radius: 16px
+      margin-bottom: 32px
+      .tag
+        width: 110px
+        height: 32px
+        border-radius: 16px 0px
+        font-size: 12px
+      img
+        width: 100%
+        min-height: 280px
+        object-fit: cover
+      h1
+        margin-bottom: 16px
+      .info
+        width: 100px
+        .date
+          font-size: 12px
+        .likes
+          font-size: 12px
+    .content
+      p
+        margin-bottom: 16px
+        font-size: 12px
+      h2
+        margin-top: 40px
+        margin-bottom: 16px
+      img
+        margin-top: 40px
+        border-radius: 16px
+        min-height: 250px
+        object-fit: cover
+    .more_news
+      h1
+        margin-top: 40px
+        margin-bottom: 24px
+  .contact-page
+    border-radius: 16px
+    padding-bottom: 0px
+    h1
+      margin-bottom: 32px
+    .span-link, .link
+      width: 100%
+    .span-link
+      .link
+        margin-bottom: 0
+    .link
+      font-size: 18px
+      margin-bottom: 40px
+    .button
+      border-radius: 16px
+      padding: 14px 40px
+      gap: 12px
+      font-size: 14px
+      margin-top: 16px
+      width: 100%
+      margin-bottom: 40px
+    .block
+      border-radius: 16px
+      padding: 16px
+      gap: 16px
+      margin-bottom: 32px
+      .full
+        gap: 16px 0
+        p
+          width: 100%
+      span
+        gap: 8px
+      span, .full
+        p
+          font-size: 14px
+  .error-page
+    min-height: 320px
+    border-radius: 16px
+    .button
+      left: 15px
+      bottom: 15px
+      width: calc(100% - 30px)
+      font-size: 20px
+      padding: 18px 40px
+      border-radius: 16px
+      z-index: 2
+    img
+      width: 90%
+      right: 15px
+      top: -12%
+  .wishlist-page
+    padding-bottom: 0px
+    border-radius: 16px
+    h1
+      span
+        font-size: 12px
+    .empty
+      margin-top: 8px
+      font-size: 14px
+    .delete_all
+      gap: 8px
+      font-size: 14px
+      svg
+        width: 16px
+        height: 16px
+    .list_style
+      margin-top: 32px
+  .cart-page
+    border-radius: 16px
+    padding-bottom: 16px
+    .go_back
+      gap: 8px
+      font-size: 12px
+      margin-top: 15px
+      margin-bottom: 40px
+    h1
+      margin-bottom: 40px
+      span
+        font-size: 12px
+    .scroll_block 
+      .scroll
+        max-height: none
+        overflow-y: inherit
+        gap: 24px
+        .item
+          gap: 16px
+          img
+            width: 67px
+            height: 67px
+            border-radius: 10px
+          span
+            .name
+              margin-bottom: 16px
+              svg
+                width: 32px
+                height: 32px
+              p
+                font-size: 14px
+                max-width: 100%
+            .qty-btn
+              .qty
+                gap: 16px
+                button
+                  border-radius: 8px
+                  padding: 3px 8px
+                  svg
+                    width: 16px
+                    height: 16px
+                input
+                  max-width: 25px
+                  font-size: 16px
+              .price
+                font-size: 16px
+      .total
+        margin-top: 24px
+        padding-top: 24px
+        border-top: 1px solid $lightblue
+        margin-bottom: 40px
+        font-size: 16px
+        .price
+          font-size: 20px
+    .fields
+      .label
+        gap: 8px
+        font-size: 16px
+        margin-bottom: 16px
+        textarea
+          height: 96px
+          padding: 16px
+          border-radius: 12px
+          font-size: 14px
+        .select
+          border-radius: 12px
+          padding: 12px 16px
+        .options
+          .option
+            border-radius: 12px
+            padding: 10px 16px
+            margin-bottom: 5px
+        .promo
+          padding: 16px
+          gap: 8px
+          border-radius: 12px
+          flex-direction: column
+          a.button
+            padding: 14px
+            gap: 16px
+            border-radius: 12px
+            font-size: 14px
+            display: inline-flex
+            align-items: center
+            justify-content: center
+          label
+            .icon 
+              left: 14px
+            input
+              border-radius: 12px
+              padding: 14px 14px 14px 48px
+              gap: 8px
+              font-size: 14px
+        .main-theme
+          padding: 14px 16px
+          border-radius: 12px
+          font-size: 14px
+      .checkbox
+        font-size: 12px
+        label
+          gap: 8px
+      .main_button
+        padding: 13px 32px
+        gap: 8px
+        border-radius: 12px
+        font-size: 16px
+  .lk-page
+    .go_back
+      margin-top: 40px
+      margin-bottom: 32px
+      gap: 8px
+      font-size: 12px
+      color: rgba(255, 255, 255, 0.60)
+      svg
+        height: 16px
+        width: 16px
+    .logout_m
+      margin-top: 40px
+      margin-bottom: 32px
+    .block
+      border-radius: 16px
+      height: 100px
+      padding: 16px
+      font-size: 20px
+      margin-bottom: 16px
+      svg
+        max-height: 90%
+        max-width: 90px
+    .profile_info_sidebar
+      margin-bottom: 32px
+      padding: 15px
+      gap: 40px
+      border-radius: 16px
+      &::after
+        content: none
+      .part_one
+        gap: 16px
+        padding-bottom: 32px
+        img
+          width: 120px
+          height: 120px
+          border: 4px solid #3B6DEC
+        .name
+          font-size: 16px
+          max-width: 50%
+        .bonus
+          height: 56px
+          gap: 8px
+          font-size: 14px
+          border-radius: 8px
+          span
+            font-size: 12px
+      .part_two
+        gap: 16px
+        .line
+          gap: 8px
+          font-size: 14px
+        span
+          font-size: 18px
+      a.button
+        padding: 18px
+        gap: 8px
+        border-radius: 12px
+        font-size: 14px
+  .lk-page.edit
+    h1
+      margin-bottom: 24px
+    .line
+      gap: 16px
+      margin-bottom: 16px
+      flex-direction: column
+      label
+        width: 100%
+        gap: 8px
+        font-size: 14px
+        input
+          padding: 14px 24px
+          border-radius: 12px
+          font-size: 14px
+        .aproved
+          font-size: 10px
+          left: 60%
+          bottom: 24px
+        svg
+          height: 49px
+          width: 51px
+      .info_block
+        width: 100%
+        height: auto
+        padding: 15px
+        gap: 16px
+        border-radius: 16px
+        font-size: 14px
+    h2
+      margin-top: 32px
+      margin-bottom: 20px
+    .subtitle
+      font-size: 14px
+    .social
+      gap: 16px
+      margin: 24px 0
+    .checkbox
+      font-size: 12px
+      margin-bottom: 32px
+      label
+        gap: 8px
+    .button_wrapper
+      gap: 16px
+      flex-direction: column
+      button
+        padding: 18px 40px
+        border-radius: 12px
+        font-size: 14px
+      span
+        font-size: 10px
+        text-align: center
+  .lk-page.orders
+    h1
+      margin-bottom: 24px
+    .order_block
+      padding: 16px
+      gap: 24px
+      border-radius: 12px
+      margin-bottom: 16px
+      >span
+        margin-bottom: 0px
+        .counter
+          font-size: 16px
+        .price
+          font-size: 16px
+      .info
+        flex-direction: column
+        align-items: flex-start
+        gap: 16px
+        .status
+          padding: 7.5px 32px
+          border-radius: 8px
+          font-size: 12px
+        span
+          flex-direction: column
+          .date
+            font-size: 16px
+            margin-bottom: 16px
+            span
+              height: 16px
+              margin: 0 16px
+          .num
+            font-size: 12px
+      .recipiet
+        padding-top: 24px
+        flex-direction: column
+        gap: 16px
+        align-items: flex-start
+        span
+          gap: 11px
+          .more
+            display: block
+          img
+            height: 56px
+            width: 56px
+            border-radius: 8px
+        .button
+          padding: 10px 24px
+          gap: 8px
+          border-radius: 8px
+          font-size: 14px
+          width: 100%
+  .lk-page.single-order
+    h1
+      margin-bottom: 8px
+    .item
+      padding-bottom: 16px
+      margin-top: 16px
+      flex-direction: column
+      align-items: flex-end
+      .code_wrapper
+        font-size: 12px
+        width: calc(100% - 16px - 64px)
+        .code
+          padding: 11px 37px
+          border-radius: 70.428px
+          font-size: 12px
+      >span
+        width: 100%
+        gap: 16px
+        img
+          width: 64px
+          height: 64px
+          border-radius: 8px
+        .info
+          align-self: baseline
+          .name, .price
+            font-size: 14px
+  .support
+    h1
+      margin-bottom: 8px
+    p, ul li
+      margin-bottom: 16px
+      font-size: 14px
+    ul
+      margin: 0 0 16px 0
+      li
+        margin-bottom: 5px
+    h2
+      margin-top: 32px
+      margin-bottom: 24px
+    .faq
+      margin-bottom: 32px
+    .block
+      padding: 16px !important
+      border-radius: 24px
+      >span
+        gap: 8px
+      .title
+        font-size: 18px
+      .subtitle
+        font-size: 14px
+        margin-bottom: 8px
+      .button
+        border-radius: 12px
+        font-size: 14px
+        padding: 14px
+    .super_link
+      margin-top: 32px
+      margin-bottom: 8px
+      font-size: 18px
+    span.info
+      font-size: 14px
+  .loginpopup
+    padding: 15px
+    gap: 32px
+    border-radius: 0px
+    background: $primary2
+    .close
+      top: 15px
+      right: 15px
+    .title
+      gap: 8px
+      justify-content: start
+      align-items: flex-start
+      width: 100%
+      .main
+        font-size: 20px
+      .info
+        font-size: 12px
+        text-align: left
+    .wrapper
+      gap: 24px
+      .social
+        font-size: 12px
+        span
+          gap: 16px
+          margin-top: 8px
+          a
+            width: 40px
+            height: 40px
+            gap: 16px
+            border-radius: 8px
+            svg
+              width: 24px
+              height: 24px
+      form
+        gap: 16px
+        .input.step-2
+          .testpass
+            font-size: 10px
+            span
+              font-size: 10px
+        button
+          font-size: 14px
+          padding: 18px
+          gap: 10px
+          border-radius: 8px
+        input.code
+          letter-spacing: 38px
+          font-size: 14px
+          padding: 14px 24px 14px 24px
+        input
+          padding: 14px 16px
+          gap: 10px
+          border-radius: 12px
+          font-size: 18px
+        label
+          gap: 12px
+          font-size: 14px
+          input
+            width: 24px
+            height: 24px
+        span
+          font-size: 10px
+  .searchform
+    border-radius: 0px
+    background: $primary2
+    left: 0%
+    transform: none
+    min-height: auto
+    top: 128.8px
+    min-width: auto
+    width: 100%
+    .full-button
+      padding: 14px
+      gap: 8px
+      border-radius: 0px
+      font-size: 14px
+      background: $primary1
+      svg
+        width: 24px
+        height: 24px
+    .tabs
+      padding-bottom: 8px
+      gap: 32px
+      width: 100%
+      justify-content: flex-start
+      .item.active
+        font-size: 16px
+        &::after
+          height: 3px
+          bottom: -8px
+      .item
+        font-size: 12px
+    .wrapper
+      width: 100%
+      gap: 24px
+      padding: 15px
+    .title
+      font-size: 20px
+    .tags
+      display: none
+      gap: 8px
+      flex-wrap: wrap
+      .tag
+        padding: 10px 12px
+        gap: 10px
+        border-radius: 8px
+        font-size: 12px
+    .products, .news, .articles
+      gap: 16px
+      .line
+        padding-bottom: 15px
+        flex-direction: column
+        align-items: flex-start
+        gap: 12px
+        span
+          width: 100%
+          gap: 16px
+          form
+            width: 100%
+          img
+            width: 40px
+            height: 40px
+            object-fit: cover
+            border-radius: 8px
+          .button
+            background: none
+            padding: 10px 40px
+            gap: 10px
+            border-radius: 8px
+            font-size: 14px
+            width: 100%
+          .rate
+            width: 40px
+            gap: 4px
+            font-size: 14px
+          >div
+            gap: 8px
+            .name
+              font-size: 12px
+            .price
+              font-size: 14px
+    .content-type
+      .empty
+        img
+          position: relative
+          bottom: -15px
+          right: auto
+          max-height: none
+          width: 100%
+        span
+          width: 100%
+          padding: 0px
+          gap: 8px
+          margin-bottom: 32px
+          .title
+            font-size: 18px
+          .subtitle
+            font-size: 12px
+  .search-page
+    border-radius: 16px
+    h1
+      font-size: 20px
+      margin-top: 40px
+      margin-bottom: 16px
+    ul
+      padding-left: 20px
+      gap: 8px
+      margin-bottom: 32px
+      li
+        font-size: 12px
+    img
+      width: 100%
+      position: relative
+  .catalog
+    .catalog-filter
+      .tabs
+        padding-bottom: 8px
+        gap: 32px
+        margin-bottom: 32px
+        .tab.active
+          &::after 
+            bottom: -8px
+        .tab
+          font-size: 16px
+          span
+            display: none
+  .case_top-line_wrapper
+    padding-bottom: 100px
+    .case_list
+      .item
+        width: 100%
+        height: 56px
+        padding: 13px 11px
+        .hover
+          display: none
+        span
+          display: none
+    .case_top-line
+      margin: 20px 0 0 0
+      .account_wrapper
+        gap: 8px
+        .wallet
+          margin-right: 0px
+          svg
+            width: 38px
+            height: 32px
+        .name
+          gap: 8px
+          span
+            gap: 4px
+            .account
+              font-size: 10px
+            .balance
+              font-size: 12px
+          img
+            width: 32px
+            height: 32px
+        .apps
+          svg
+            width: 32px
+            height: 32px
+  .case_wrapper
+    .case-menu
+      flex-direction: column
+      height: auto
+      top: -80px
+      padding: 15px
+      gap: 8px
+      border-radius: 12px
+      .item
+        &:last-child
+          border-right: none
+          font-size: 14px
+          span
+            gap: 16px
+      .item
+        width: 100%
+        height: 80px
+        border-radius: 8px
+        font-size: 14px
+        p
+          padding: 16px
+    .case-info_blocks
+      .col-xl-4
+        .block
+          padding: 24px
+          height: 250px
+          margin-bottom: 32px
+          p
+            font-size: 18px
+            right: 24px
+            bottom: 24px
+            gap: 8px
+          img
+            max-height: 218px
+            left: 0
+            bottom: 0
+      .col-xl-8
+        .block
+          padding: 15px 15px 0 15px
+          img
+            position: relative
+            bottom: auto
+            right: auto
+            width: 100%
+      .block
+        height: auto
+        border-radius: 26px
+        img
+          height: 100%
+          width: auto
+          position: absolute
+        .content
+          gap: 24px
+          width: 100%
+          .line
+            width: 100%
+            gap: 32px
+            .item
+              gap: 8px
+              svg
+                width: 24px
+                height: 24px
+              span
+                max-width: 100px
+                .count
+                  font-size: 14px
+                p
+                  font-size: 12px
+  .catalog-filter
+    .filters
+      gap: 16px
+      flex-wrap: wrap
+      .search
+        width: 100%
+        height: 48px
+        input
+          padding: 12px 16px
+          font-size: 14px
+          border-radius: 8px
+        svg
+          right: 16px
+      .range
+        gap: 16px
+        width: 100%
+        flex-wrap: wrap
+        .wrapper
+          width: 100%
+        #range1
+          border-radius: 8px 0px 0px 8px
+        #range2
+          border-radius: 0px 8px 8px 0px
+        #range1, #range2
+          height: 48px
+          padding: 14px 16px
+          font-size: 14px
+        .slider
+          width: 100%
+          .counters
+            margin-bottom: 20px
+            #range5, #range6
+              font-size: 14px
+          .container 
+            width: 100%
+            input[type="range"]::-webkit-slider-thumb
+              height: 24px
+              width: 24px
+    .balance
+      margin-top: 26px
+      font-size: 14px
+      padding: 14px 16px
+      gap: 32px
+      border-radius: 8px
+    .cats
+      margin-top: 24px
+      height: auto
+      padding: 8px
+      gap: 8px
+      flex-wrap: wrap
+      border-radius: 16px !important
+      .item
+        border-radius: 12px
+        font-size: 18px
+        padding: 24px
+        width: 100%
+        height: 72px
+        .lay
+          gap: 8px
+          font-size: 18px
+          border-radius: 12px
+    .cats-active
+      margin-top: 16px
+      margin-bottom: 12px
+      font-size: 14px
+    ul.list
+      li
+        a
+          font-size: 14px
+          gap: 8px
+  .case_list_wrapper
+    margin-top: 48px
+    .title
+      gap: 16px
+      margin-bottom: 24px
+      .hide-button
+        padding: 6px 16px
+        gap: 8px
+        border-radius: 8px
+        font-size: 14px
+    .cases
+      margin-bottom: 48px
+      gap: 16px
+      .item
+        width: calc(100% / 2 - 16px)
+        .name
+          font-size: 16px
+          margin-bottom: 8px
+        .price
+          padding: 6px 16px
+          gap: 8px
+          font-size: 14px
+  .case_profile
+    .info-block
+      border-radius: 16px
+      padding: 16px
+      height: 180px
+      margin-top: 16px
+      .title
+        font-size: 16px
+        margin-bottom: 8px
+      .subtitle
+        font-size: 14px
+        margin-bottom: 40px
+      a
+        padding: 10px 32px
+        border-radius: 8px
+        font-size: 14px
+    .statistics
+      padding: 16px
+      gap: 32px
+      border-radius: 12px
+      .profile
+        span
+          gap: 8px
+          a
+            svg
+              height: 32px
+              width: 32px
+          img
+            border-radius: 8px
+            width: 40px
+            height: 40px
+          .info
+            gap: 4px
+            .name
+              font-size: 14px
+            .balance
+              font-size: 14px
+      .bonus
+        border-radius: 12px
+        padding: 8px
+        .button
+          font-size: 20px
+          padding: 10px 32px
+          gap: 10px
+          border-radius: 8px
+          width: 100%
+        img
+          display: none
+    .case_items
+      margin-top: 48px
+      margin-bottom: 48px
+      h1
+        gap: 8px
+        span
+          font-size: 12px
+      .button_sell
+        padding: 10px 12px
+        gap: 8px
+        border-radius: 8px
+        font-size: 14px
+      .items_wrapper
+        margin-top: 32px
+        border-radius: 16px
+        padding: 16px
+        flex-direction: column
+        align-items: flex-start
+        >img
+          left: auto
+          right: 0
+          bottom: 0
+          height: 70%
+          transform: scale(-1, 1)
+        .button
+          font-size: 14px
+          padding: 10px 12px
+          gap: 8px
+          border-radius: 8px
+          svg
+            width: 21px
+            height: 16px
+        span
+          gap: 8px
+          padding-left: 0px
+          .title
+            font-size: 14px
+          .subtitle
+            font-size: 12px
+            margin-bottom: 24px
+  .single_case
+    h1
+      margin-bottom: 36px
+      justify-content: space-between
+      .button_back
+        position: relative
+        left: auto
+        top: auto
+        transform: none
+        padding: 6px 16px
+        gap: 8px
+        border-radius: 8px
+        font-size: 14px
+    .case_section
+      border-radius: 24px
+      margin-bottom: 80px
+      height: 300px
+      img
+        top: -10%
+        height: 110%
+      span
+        gap: 8px
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -20%
+        width: max-content
+      .button_open
+        padding: 13px 64px
+        gap: 10px
+        border-radius: 8px
+        font-size: 16px
+      .button_balance
+        padding: 13px 32px
+        gap: 16px
+        border-radius: 8px
+        font-size: 16px
+        svg
+          width: 24px
+          height: 24px
+  .case_items
+    margin-bottom: 48px
+    padding: 40px 0
+    h1
+      margin-bottom: 32px
+    .item
+      width: calc(100% / 2 - 2px)
+      height: 144px
+      span
+        left: 16px
+        bottom: 16px
+        font-size: 14px
+  .case_balance
+    h1
+      margin-bottom: 32px
+      gap: 8px
+    .case_balance_add
+      margin-bottom: 48px
+      .payments_list, .mobile_payments .wrapper
+        gap: 4px
+        .item
+          width: calc(100% / 2 - 4px)
+          height: 100px
+          padding: 0px 35px 0px 35px
+          border-radius: 8px
+          .hover
+            border-radius: 8px
+      .mobile_payments
+        display: none
+    .payment_form
+      form
+        gap: 15px
+        .payment
+          padding: 15px
+          border-radius: 12px
+          gap: 8px
+          flex-direction: column
+          position: relative
+          svg.active
+            transform: rotate(180deg)
+          svg
+            transition: all 0.3s ease
+            position: absolute
+            right: 15px
+            top: 15px
+          span
+            font-size: 10px
+            gap: 8px
+            .selected_payment
+              display: none
+        .promo
+          padding: 15px
+          gap: 8px
+          border-radius: 12px
+          label
+            svg
+              left: 16px
+              width: 16px
+              height: 16px
+            input
+              padding: 16px 16px 16px 40px
+              gap: 8px
+              border-radius: 12px
+              font-size: 12px
+          button, .button
+            padding: 16px
+            gap: 8px
+            border-radius: 12px
+            font-size: 12px
+        .summ
+          padding: 15px
+          gap: 16px
+          border-radius: 12px
+          .checkbox
+            label
+              gap: 8px
+              svg
+                width: 40px
+                height: 24px
+              span
+                font-size: 12px
+                a
+                  font-size: 12px
+          span
+            font-size: 14px
+          label
+            svg
+              left: 16px
+              width: 16px
+              height: 16px
+            input
+              padding: 16px 16px 16px 40px
+              gap: 8px
+              border-radius: 12px
+              font-size: 16px
+        .send
+          padding: 14px 32px
+          gap: 8px
+          border-radius: 12px
+          font-size: 14px
+          svg
+            width: 16px
+            height: 16px
+  .card.layout
+    .img
+      height: 213px
+    .name
+      height: 16px
+    .price
+      .sale
+        height: 26px
+      .lastprice
+        height: 16px
+        width: 110px
+        margin-bottom: 15px
+  .case_section.rullet_case
+    height: auto
+    margin-bottom: 14px
+    .rullet
+      margin: auto
+      padding: 21px 0
+      .wraper
+        .window
+          height: 258px
+        .list
+          li
+            img
+              width: 164px
+              height: 258px
+  .case_open_btns
+    gap: 8px
+    margin-bottom: 30px
+    flex-direction: column
+    .button_open
+      font-size: 16px
+      padding: 13px 24px
+      border-radius: 8px
+    .button_balance
+      font-size: 16px
+      padding: 13px 24px
+      border-radius: 8px
+  .z_popup
+    padding: 15px
+    border-radius: 0px
+    max-width: 100%
+    .title
+      font-size: 18px
+      margin-bottom: 24px
+      .close
+        .mfp-close
+          padding: 10px
+    hr
+      margin: 0 0 24px 0
+    .info-line
+      margin-bottom: 24px
+      a.check
+        gap: 8px
+        font-size: 12px
+        svg
+          width: 16px
+          height: 16px
+      .status
+        font-size: 12px
+        span
+          padding-left: 8px
+          font-size: 12px
+    .wrapper
+      gap: 15px
+      margin-bottom: 24px
+      position: relative
+      .column-1
+        width: 156px
+        img
+          border-radius: 14px
+      .column-2
+        width: calc(100% - 156px - 15px)
+        .super-info
+          .line
+            span
+              .name
+                font-size: 12px !important
+        .info
+          gap: 8px
+          padding: 0px
+          margin-bottom: 72px
+          .line
+            flex-direction: column
+            gap: 8px
+            span
+              gap: 4px
+              font-size: 10px
+              .name
+                font-size: 12px
+        .code
+          gap: 8px
+          position: absolute
+          left: 0
+          bottom: 0
+          .code_wrapper
+            width: calc(100% - 8px - 56px)
+            padding: 10px 32px
+            gap: 2px
+            font-size: 10px
+            border-radius: 16px
+            .code-get
+              font-size: 14px
+          .copy-button
+            width: 56px
+            height: 56px
+            border-radius: 16px
+    .support
+      gap: 16px
+      font-size: 14px
+      flex-direction: column
+      .button
+        padding: 15px
+        gap: 10px
+        font-size: 18px
+        border-radius: 16px
+        width: 100%
+    .info-blob
+      padding: 16px
+      gap: 10px
+      border-radius: 19px
+      margin-bottom: 24px
+      font-size: 14px
+  #z3_popup
+    .wrapper
+      .column-2
+        .super-info
+          position: absolute
+          left: 0
+          bottom: 0
+          margin-bottom: 0 !important
+        .info
+          margin-bottom: 119px
+
++media-breakpoint-up(sm)
++media-breakpoint-up(md)
++media-breakpoint-up(lg)
+  h1.inter
+    font-size: 40px
+    line-height: 120%
+    font-weight: 500
+    font-family: $inter
+  h1.regular
+    font-family: $roboto
+    font-size: 40px
+    font-weight: 500
+    line-height: 150%
+  h2.inter
+    font-family: $inter
+    font-size: 32px
+    font-weight: 500
+    line-height: 140%
+  h3
+    font-family: $inter
+    font-size: 24px
+    line-height: 140%
+  h2.regular
+    font-family: $roboto
+    font-size: 32px
+    font-weight: 400
+    line-height: 140%
+  p
+    font-family: $inter
+    font-size: 18px
+    line-height: 140%
+  p.middle
+    font-family: $inter
+    font-size: 16px
+    line-height: 140%
+  p.small
+    font-family: $inter
+    font-size: 14px
+    line-height: 140%
+  .lil
+    font-family: $inter
+    font-size: 12px
+    font-weight: 400
+    line-height: 140%
+  .top-line
+    .logo
+      width: auto
+    .main
+      padding: 32px 0
+      .search
+        width: 45%
+        max-width: 550px
+        margin-top: 0px
+        label
+          input
+            padding: 17px 16px
+            border-radius: 16px
+            color: rgba(156, 171, 255, 0.60)
+            font-size: 18px
+            &::placeholder
+              color: rgba(156, 171, 255, 0.60)  
+              font-size: 18px
+          button.icon
+            right: 16px
+            top: 12px
+            svg
+              width: 32px
+              height: 32px
+  .main-content
+    padding-top: 32px
+    padding-bottom: 32px
+    border-radius: 40px 0px 0px 40px
+    >.row
+      padding-left: 16px
+      padding-right: 16px
+  .hero
+    margin-bottom: 0px
+    .slider-wrapper
+      .pagingInfo
+        display: block
+    .slider
+      .slide
+        height: 450px
+    .slider_first
+      margin-bottom: 0px !important
+      .slick-slide
+        >div
+          margin-right: 14px
+      .slide
+        border-radius: 40px
+        padding: 32px
+        img.logo
+          width: 64%
+          height: auto
+          z-index: 1
+          margin-top: 0
+        p
+          max-width: 64%
+          font-size: 14px
+          z-index: 1
+        span
+          gap: 24px
+          align-items: flex-end
+          flex-wrap: nowrap
+          justify-content: start
+          .button
+            font-size: 20px
+            height: 64px
+            padding: 10px 24px
+            gap: 10px
+            border-radius: 16px
+            width: auto
+          .price
+            gap: 8px
+            align-items: flex-end
+            .sale
+              font-size: 24px
+              padding: 5px 8px
+              border-radius: 8px
+            .lastprice
+              font-size: 20px
+            .newprice
+              font-size: 20px
+        img.main
+          top: 6%
+          left: 58%
+          width: 48.4%
+      .slick-arrow
+        top: auto
+        transform: none
+        width: 24px
+        height: 24px
+      .slick-next
+        bottom: 32px
+        right: 32px
+      .slick-prev
+        bottom: 32px
+        left: auto
+        right: 130px
+      .slick-dots
+        display: none !important
+    .slider_second
+      .slick-arrow
+        width: 48px
+        height: 48px
+        transform: translateY(-50%)
+      .slick-next
+        top: 50%
+        bottom: auto
+        right: -25px
+      .slick-prev
+        top: 50%
+        bottom: auto
+        left: -25px
+      .slide
+        border-radius: 40px
+        height: 450px
+        a
+          height: 100%
+  .catalog-slider
+    margin-top: 90px
+    h1
+      margin-bottom: 40px
+  .card
+    .lay
+      font-size: 18px
+      border-radius: 24px 24px 5px 5px
+      display: flex
+      height: calc(100% - 24px)
+    img
+      margin-bottom: 24px
+      border-radius: 24px
+    .name
+      margin-bottom: 16px
+      font-size: 18px
+    .price
+      gap: 8px
+      align-items: flex-end
+      flex-wrap: nowrap
+      .sale
+        font-size: 18px
+        padding: 5px 8px
+        gap: 10px
+        border-radius: 8px
+      .lastprice
+        font-size: 18px
+      .newprice
+        font-size: 18px
+        display: inline-block
+        margin-bottom: 0px
+        width: auto
+  .banner
+    margin-top: 80px
+  .catalog-tabs
+    margin-top: 80px
+    span
+      >a
+        font-size: 20px
+    .content_catalog
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      grid-template-areas: ". . . . ." ". . . . ." ". . . . ."
+      gap: 32px 32px
+    .tabs
+      margin-top: 24px
+      margin-bottom: 40px
+      display: flex
+      gap: 32px
+      flex-wrap: nowrap
+      .tab
+        font-size: 20px
+    .pagination
+      margin-top: 48px
+      ul
+        gap: 8px
+        li
+          a
+            font-size: 18px
+            width: 40px
+            height: 40px
+  .news
+    margin-top: 80px
+    h1
+      margin-bottom: 40px
+  .news_card
+    border-radius: 20px 20px 0 0
+    margin-bottom: 0px
+    img
+      height: 249.998px
+      border-radius: 20px
+      margin-bottom: 24px
+    .tag
+      width: 96.473px
+      height: 28.802px
+      border-radius: 20px 0px
+      font-size: 12px
+    .name
+      font-size: 24px
+      margin-bottom: 24px
+    span
+      .date
+        font-size: 18px
+      .likes
+        font-size: 14px
+  .form
+    margin-top: 80px
+    .wrapper
+      border-radius: 40px
+      padding: 40px
+      height: 350px
+      background-image: url(../images/dist/form.png)
+      img
+        right: 0
+        bottom: 0
+        max-width: 48%
+        position: absolute
+      h1, form
+        width: 55%
+      form
+        span
+          font-size: 18px
+          a
+            font-size: 18px
+        label
+          margin-bottom: 16px
+          input
+            height: 72px
+            padding: 10px 16px 10px 24px
+            border-radius: 16px
+            font-size: 20px
+          button
+            right: 16px
+  footer
+    margin-top: 64px
+    margin-bottom: 24px
+    .payments
+      margin-top: 64px
+      h3
+        margin-bottom: 24px
+        font-size: 24px
+      span
+        gap: 34px
+    .links
+      flex-direction: row
+      align-items: flex-end
+      margin-top: 0
+      gap: 0
+      a
+        font-size: 20px
+  .catalog
+    border-radius: 0px
+    // background-size: cover
+  .breadcrumbs
+    gap: 48px
+    padding: 32px 0
+    a
+      font-size: 20px
+      &::after
+        right: -32px
+        width: 16px
+    span
+      font-size: 20px
+  .catalog-page-slider
+    h1
+      margin-bottom: 69px
+    .catalog-cat
+      h2
+        margin-bottom: 34px
+    .catalog-cat-slider
+      margin-bottom: 48px
+    .cat-card
+      height: 350px
+      border-radius: 40px
+      padding: 32px
+      margin-bottom: 0px
+      .name
+        font-size: 24px
+        margin-bottom: 8px
+      .link
+        font-size: 18px
+  .product-card_list.active
+    display: flex
+  .catalog_menu
+    display: block
+  .catalog-filter
+    .catalog-footer
+      padding-bottom: 64px
+    h1.inter
+      gap: 16px
+      margin-bottom: 24px
+      span
+        font-size: 20px
+    .col-xl-3
+      margin-bottom: 32px
+    .search
+      display: inline-block
+    .block
+      border-radius: 16px
+      padding: 16px
+      margin-bottom: 16px
+      .title
+        font-size: 20px
+        svg
+          width: 24px
+          height: 24px
+        span
+          margin-left: 8px
+          font-size: 20px
+      .wrapper
+        gap: 4px
+        margin-bottom: 30px
+        .line
+          max-width: 24px
+      #range1, #range2, #range3, #range4
+        border-radius: 8px
+        height: 56px
+        padding: 8px 16px
+        font-size: 20px
+      .container 
+        margin-bottom: 10px
+        .slider-track
+          height: 2px
+        input[type="range"]::-ms-track
+          height: 2px
+        input[type="range"]::-webkit-slider-thumb
+          height: 20px
+          width: 20px
+      .switcher_ui.active
+        &::after
+          left: calc(100% - 28px)
+      .switcher_ui
+        width: 64px
+        height: 32px
+        border-radius: 100px
+        &::after
+          width: 24px
+          height: 24px
+          border-radius: 24px
+          left: 4px
+          top: 4px
+      .content
+        margin-top: 24px
+      .checkbox-list
+        a.more
+          font-size: 20px
+          margin-top: 8px
+        label
+          font-size: 18px
+          gap: 16px
+          margin-bottom: 16px
+          svg
+            width: 24px
+            height: 24px
+    .buttonmore
+      padding: 18px
+      border-radius: 16px
+      font-size: 18px
+      margin-bottom: 24px
+      background: none
+      border: 1px solid $lightblue
+    .show_count
+      gap: 8px
+      font-size: 18px
+    .cats
+      border-radius: 24px
+      margin-bottom: 23px
+      .list
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 16px
+        flex-wrap: nowrap
+        gap: 0px
+        .buttons
+          flex-wrap: nowrap
+          gap: 8px
+          .button
+            font-size: 16px
+            height: 48px
+            padding: 0px 16px
+            gap: 10px
+        .more
+          font-size: 16px
+          gap: 8px
+      .sort
+        padding: 16px
+        .popular
+          font-size: 16px
+          gap: 8px
+        .view
+          display: flex
+          gap: 8px
+    .tabs_list
+      gap: 24px
+      margin-bottom: 24px
+      .tab
+        font-size: 18px
+        padding: 13px 24px
+        gap: 10px
+        width: auto
+        border: 2px solid $hoverblue
+        background: none
+        svg
+          width: 24px
+          height: 24px
+  .pagination
+    margin-bottom: 0px
+    ul
+      flex-wrap: nowrap
+      li
+        a
+          font-size: 18px
+          width: 40px
+          height: 40px
+          border-radius: 8px
+  .product-card
+    padding-bottom: 64px
+    border-radius: 0
+    h1
+      margin-bottom: 30px
+    .buy_type
+      gap: 16px
+      margin-bottom: 16px
+      .button
+        font-size: 16px
+        height: 48px
+        padding: 0px 24px
+        gap: 8px
+        border-radius: 12px
+        justify-content: start
+        width: auto
+    .type-info
+      margin-bottom: 16px
+      padding: 16px
+      gap: 16px
+      border-radius: 16px
+      svg
+        width: 40px
+        height: 40px
+      span
+        width: calc(100% - 40px - 16px)
+        font-size: 14px
+    .product_image
+      margin-bottom: 16px
+    .tag
+      margin-bottom: 8px
+      padding: 4px 16px
+      gap: 10px
+      border-radius: 7px
+      font-size: 18px
+    .price
+      gap: 16px
+      margin-bottom: 8px
+      .sale
+        font-size: 18px
+        padding: 4px 16px
+        gap: 10px
+        border-radius: 7px
+      .lastprice
+        font-size: 32px
+        margin-left: 8px
+      .newprice
+        font-size: 40px
+    .action
+      margin-bottom: 16px
+      font-size: 16px
+    .button.buy, .button.cart, .button.wishlist, .button.delwishlist
+      padding: 17px
+      gap: 10px
+      border-radius: 12px
+      font-size: 16px
+      margin-bottom: 10px
+    ul
+      margin: 8px 0 0 0
+      li
+        height: 48px
+        padding: 10px 0px
+        font-size: 16px
+        span
+          font-size: 16px
+          gap: 16px
+    .product-main-slider
+      margin-bottom: 40px
+      .slider-for
+        margin-bottom: 24px
+        img
+          height: 595px
+          border-radius: 24px
+      .slider-nav
+        img
+          width: 100px
+          border-radius: 8px
+    p.description
+      margin-bottom: 40px
+      font-size: 24px
+    h4
+      margin-bottom: 24px
+      font-size: 20px
+    p.max, ol li
+      font-size: 20px
+      margin-bottom: 16px
+    .photo-slider
+      display: flex
+      flex-wrap: wrap
+      gap: 32px
+      margin-bottom: 40px
+      margin-top: 40px
+      div
+        img
+          width: 100%
+        &:first-child, &:nth-child(2), &:nth-child(4), &:nth-child(5)
+          width: calc(50% - 16px)
+          img
+            border-radius: 16px
+        &:nth-child(3)
+          width: 100%
+          img
+            border-radius: 24px
+    h3
+      margin-bottom: 24px
+    .system
+      padding: 32px
+      gap: 32px
+      border-radius: 32px
+      .title
+        font-size: 18px
+      p
+        font-size: 18px
+    .case
+      margin-bottom: 8px
+      h1
+        margin-bottom: 48px
+      img
+        border-radius: 16px
+        margin-bottom: 24px
+        height: 200px
+      .name
+        font-size: 20px
+        margin-bottom: 32px
+  .servs
+    .wrapper
+      border-radius: 40px 0px 0px 40px
+      h1
+        margin-bottom: 24px
+      .catalog-filter
+        .cats
+          margin-bottom: 32px
+          border-radius: 16px
+    .col-xl-3.col-6
+      margin-bottom: 32px
+  .single-serv
+    .hero_img
+      margin-bottom: 40px
+      img
+        height: 595px
+        border-radius: 24px
+  .faq
+    gap: 16px
+    .item.active
+      .title
+        border-radius: 16px 16px 0px 0px
+    .item
+      .title
+        padding: 14px 24px
+        font-size: 20px
+        border-radius: 16px
+        svg
+          width: 24px
+          height: 24px
+      .content
+        padding: 24px
+        border-radius: 0px 0px 16px 16px
+        font-size: 18px
+  .pay
+    border-radius: 0px
+    h1
+      margin-bottom: 48px
+    .item.right
+      align-items: flex-end
+    .item
+      margin-bottom: 32px
+      .step
+        font-size: 24px
+        border-radius: 12px
+        padding: 7px 16px
+        gap: 10px
+        margin-bottom: 16px
+      p
+        font-size: 20px
+        margin-bottom: 24px
+      img
+        border-radius: 32px
+  .payments
+    padding-bottom: calc(64px - 16px)
+    border-radius: 0px
+    h1
+      margin-bottom: 24px
+    .subtitle
+      margin-bottom: 32px
+      font-size: 20px
+    .block
+      height: 220px
+      gap: 20px
+      border-radius: 24px
+      margin-bottom: 16px
+      padding: 70px
+  .info-page
+    border-radius: 0px
+    padding-bottom: calc(64px - 16px)
+    h1
+      margin-bottom: 24px
+    p
+      margin-bottom: 16px
+      font-size: 20px
+  .about-page
+    border-radius: 0px
+    padding-bottom: calc(64px - 16px)
+    h1
+      margin-bottom: 44px
+    .hero
+      background-size: cover
+      border-radius: 32px
+      height: 520px
+      margin-bottom: 176px
+      .logo
+        top: 32px
+      .banner
+        max-width: 748px
+        bottom: -18%
+        font-size: 24px
+        padding: 32px
+        border-radius: 32px
+    .advantage
+      padding-bottom: 64px
+      h1
+        margin-bottom: 48px
+      .col-xl-4
+        &:nth-child(2), &:nth-child(3), &:nth-child(4)
+          border-bottom: 1px solid $lightblue
+        &:nth-child(3), &:nth-child(6)
+          border-left: 1px solid $lightblue
+          border-right: 1px solid $lightblue
+      .block
+        gap: 24px
+        padding: 24px 0
+        border-bottom: none
+        svg
+          width: 48px
+        span
+          width: calc(100% - 48px - 24px)
+          gap: 16px
+          .title
+            font-size: 24px
+          p
+            font-size: 20px
+    .advantage-plus
+      padding: 64px 0
+      .block
+        height: 400px
+        border-radius: 32px
+        padding: 48px
+        margin-bottom: 0
+        img
+          position: absolute
+          right: 0
+          bottom: 0
+          width: auto
+          height: auto
+        h1
+          margin-bottom: 24px
+        p
+          font-size: 20px
+        .button
+          border-radius: 16px
+          font-size: 20px
+          min-width: 354px
+          padding: 18px 24px
+    .payments
+      padding-top: 64px
+      h1
+        margin-bottom: 48px
+  .news-page
+    border-radius: 0px
+    padding-bottom: 64px
+    h1
+      margin-bottom: 40px
+    .content_catalog
+      .item
+        margin-bottom: 30px
+        &:nth-child(1)
+          .news_card
+            border-radius: 24px 24px 0 0
+            img
+              height: 400px
+              border-radius: 24px
+              margin-bottom: 0px
+            .tag
+              width: 217px
+              height: 41px
+              border-radius: 24px 0px
+              font-size: 14px
+            .name
+              position: absolute
+              margin-bottom: 0
+              bottom: 91px
+              width: calc(100% - 80px)
+              left: 40px
+            span
+              position: absolute
+              width: calc(100% - 80px)
+              left: 40px
+              bottom: 42px
+        &:nth-child(2)
+          .news_card
+            border-radius: 24px 24px 0 0
+            img
+              height: 225px
+              border-radius: 24px
+            .tag
+              border-radius: 24px 0px
+    .buttonmore
+      padding: 18px
+      border-radius: 16px
+      font-size: 18px
+      background: none
+      border: 1px solid $lightblue
+      margin-bottom: 24px
+    .show_count
+      gap: 8px
+      font-size: 18px
+    .tabs
+      margin-top: 24px
+      margin-bottom: 40px
+      gap: 32px
+      .tab.active
+        &::after
+          border-radius: 60px
+          height: 3px
+          bottom: -8px
+      .tab
+        font-size: 20px
+  .single-news
+    border-radius: 0px
+    padding-bottom: 64px
+    .hero
+      border-radius: 32px
+      margin-bottom: 64px
+      .tag
+        width: 140px
+        height: 32px
+        border-radius: 32px 0px
+        font-size: 14px
+      img
+        width: 100%
+      h1
+        margin-bottom: 24px
+      .info
+        width: 120px
+        .date
+          font-size: 18px
+        .likes
+          font-size: 14px
+    .content
+      p
+        margin-bottom: 24px
+        font-size: 18px
+      h2
+        margin-top: 64px
+        margin-bottom: 24px
+      img
+        margin-top: 40px
+        border-radius: 32px
+    .more_news
+      h1
+        margin-top: 80px
+        margin-bottom: 40px
+  .contact-page
+    border-radius: 0px
+    padding-bottom: 32px
+    h1
+      margin-bottom: 48px
+    .link, .span-link
+      width: auto
+    .link
+      font-size: 32px
+      margin-bottom: 0px
+    .button
+      border-radius: 16px
+      padding: 16px 40px
+      gap: 16px
+      font-size: 20px
+      margin-top: 32px
+      width: auto
+      margin-bottom: 0
+    .block
+      border-radius: 24px
+      padding: 40px
+      gap: 24px
+      margin-bottom: 32px
+      .full
+        gap: 24px 0
+        p
+          width: calc(100% / 3)
+      span
+        gap: 16px
+      span, .full
+        p
+          font-size: 20px
+  .error-page
+    min-height: 530px
+    border-radius: 32px
+    .button
+      left: 32px
+      bottom: 32px
+      font-size: 20px
+      padding: 18px 40px
+      border-radius: 16px
+      width: auto
+    img
+      width: auto
+      right: -5%
+      top: -17%
+  .wishlist-page
+    padding-bottom: 64px
+    border-radius: 0px
+    h1
+      span
+        font-size: 20px
+    .empty
+      margin-top: 16px
+      font-size: 20px
+    .delete_all
+      gap: 8px
+      font-size: 18px
+      svg
+        width: 24px
+        height: 24px
+    .list_style
+      margin-top: 48px
+  .cart-page
+    border-radius: 0px
+    padding-bottom: 64px
+    .go_back
+      gap: 16px
+      font-size: 20px
+      margin-top: 32px
+      margin-bottom: 32px
+    h1
+      margin-bottom: 48px
+      span
+        font-size: 20px
+    .scroll_block 
+      .scroll
+        max-height: 100vh
+        overflow-y: scroll
+        gap: 32px
+        .item
+          gap: 24px
+          img
+            width: 140px
+            height: 140px
+            border-radius: 24px
+          span
+            .name
+              margin-bottom: 20px
+              svg
+                width: 48px
+                height: 48px
+              p
+                font-size: 20px
+                max-width: 80%
+            .qty-btn
+              .qty
+                gap: 16px
+                button
+                  border-radius: 12px
+                  padding: 11px 12px
+                  svg
+                    width: 24px
+                    height: 24px
+                input
+                  max-width: 20px
+                  font-size: 24px
+              .price
+                font-size: 24px
+      .total
+        font-size: 24px
+        margin-top: 0px
+        padding-top: 0px
+        border-top: 0px solid $lightblue
+        margin-bottom: 0px
+        .price
+          font-size: 40px
+    .fields
+      .label
+        gap: 16px
+        font-size: 24px
+        margin-bottom: 24px
+        textarea
+          height: 160px
+          padding: 24px
+          border-radius: 16px
+          font-size: 20px
+        .select
+          border-radius: 16px
+          padding: 20px 24px
+        .options
+          .option
+            border-radius: 16px
+            padding: 15px 24px
+            margin-bottom: 5px
+        .promo
+          padding: 24px
+          gap: 8px
+          border-radius: 24px
+          flex-direction: row
+          a.button
+            padding: 24px
+            gap: 16px
+            border-radius: 16px
+            font-size: 20px
+          label
+            .icon 
+              left: 24px
+            input
+              border-radius: 16px
+              padding: 24px 24px 24px 64px
+              gap: 16px
+              font-size: 20px
+        .main-theme
+          padding: 24px
+          border-radius: 16px
+          font-size: 20px
+      .checkbox
+        font-size: 16px
+        label
+          gap: 16px
+      .main_button
+        padding: 19px 32px
+        gap: 16px
+        border-radius: 16px
+        font-size: 24px
+  .lk-page
+    .go_back
+      margin-top: 32px
+      margin-bottom: 44px
+      gap: 16px
+      font-size: 20px
+      color: white
+      svg
+        height: 24px
+        width: 24px
+    .block
+      border-radius: 24px
+      height: 350px
+      padding: 40px
+      font-size: 40px
+      margin-bottom: 32px
+      svg
+        max-width: none
+    .profile_info_sidebar
+      margin-bottom: 0px
+      padding: 40px 32px 32px 32px
+      gap: 44px
+      border-radius: 40px 0px 0px 40px
+      &::after
+        content: ''
+      .part_one
+        gap: 16px
+        padding-bottom: 32px
+        img
+          width: 120px
+          height: 120px
+          border: 4px solid #3B6DEC
+        .name
+          font-size: 24px
+          max-width: 50%
+        .bonus
+          height: 72px
+          gap: 8px
+          font-size: 18px
+          border-radius: 16px
+          span
+            font-size: 16px
+      .part_two
+        gap: 32px
+        .line
+          gap: 12px
+          font-size: 20px
+        span
+          font-size: 32px
+      a.button
+        padding: 15px
+        gap: 10px
+        border-radius: 16px
+        font-size: 18px
+  .lk-page.edit
+    h1
+      margin-bottom: 48px
+    .line
+      gap: 32px
+      flex-direction: row
+      margin-bottom: 32px
+      label
+        width: calc(50% - 16px)
+        gap: 16px
+        font-size: 18px
+        input
+          padding: 19px 24px
+          border-radius: 12px
+          font-size: 18px
+        .aproved
+          font-size: 12px
+          left: 40%
+          bottom: 24px
+        svg
+          height: auto
+          width: auto
+      .info_block
+        width: calc(50% - 16px)
+        height: 100%
+        padding: 24px
+        gap: 16px
+        border-radius: 16px
+        font-size: 20px
+    h2
+      margin-top: 40px
+      margin-bottom: 20px
+    .subtitle
+      font-size: 20px
+    .social
+      gap: 24px
+      margin: 32px 0
+    .checkbox
+      font-size: 16px
+      margin-bottom: 46px
+      label
+        gap: 16px
+    .button_wrapper
+      gap: 24px
+      flex-direction: row
+      button
+        padding: 18px 40px
+        border-radius: 16px
+        font-size: 20px
+      span
+        text-align: left
+        font-size: 16px
+  .lk-page.orders
+    h1
+      margin-bottom: 48px
+    .order_block
+      padding: 32px
+      gap: 24px
+      border-radius: 16px
+      margin-bottom: 32px
+      >span
+        margin-bottom: 8px
+        .counter
+          font-size: 24px
+        .price
+          font-size: 32px
+      .info
+        flex-direction: row
+        align-items: center
+        gap: 0
+        .status
+          padding: 7.5px 40px
+          border-radius: 8px
+          font-size: 18px
+        span
+          flex-direction: row
+          .date
+            font-size: 24px
+            margin-bottom: 12px
+            span
+              height: 23px
+              margin: 0 30px
+          .num
+            font-size: 18px
+      .recipiet
+        padding-top: 24px
+        flex-direction: row
+        gap: 0px
+        align-items: flex-end
+        span
+          gap: 24px
+          .more
+            display: none
+          img
+            height: 100px
+            width: 100px
+            border-radius: 12px
+        .button
+          padding: 7.5px 24px
+          gap: 8px
+          border-radius: 8px
+          font-size: 18px
+          width: auto
+  .lk-page.single-order
+    h1
+      margin-bottom: 5px
+    .item
+      padding-bottom: 32px
+      margin-top: 32px
+      flex-direction: row
+      align-items: flex-start
+      .code_wrapper
+        font-size: 18px
+        width: auto
+        .code
+          padding: 10px 39.277px
+          border-radius: 70.428px
+          font-size: 18px
+      >span
+        width: auto
+        gap: 32px
+        img
+          width: 100px
+          height: 100px
+          border-radius: 12px
+        .info
+          align-self: stretch
+          .name, .price
+            font-size: 20px
+  .support
+    h1
+      margin-bottom: 16px
+    p, ul li
+      margin-bottom: 24px
+      font-size: 20px
+    ul
+      margin: 0 0 24px 0
+      li
+        margin-bottom: 5px
+    h2
+      margin-top: 40px
+      margin-bottom: 24px
+    .faq
+      margin-bottom: 80px
+    .block
+      padding: 40px !important
+      border-radius: 24px
+      >span
+        gap: 10px
+      .title
+        font-size: 32px
+      .subtitle
+        font-size: 20px
+        margin-bottom: 14px
+      .button
+        border-radius: 16px
+        font-size: 20px
+        padding: 18px
+    .super_link
+      margin-top: 40px
+      margin-bottom: 16px
+      font-size: 32px
+    span.info
+      font-size: 20px
+  .loginpopup
+    padding: 40px
+    gap: 32px
+    border-radius: 32px
+    background: $primary1
+    .close
+      top: 18px
+      right: 18px
+    .title
+      justify-content: center
+      gap: 16px
+      align-items: center
+      .main
+        font-size: 32px
+      .info
+        font-size: 20px
+        text-align: center
+    .wrapper
+      gap: 32px
+      .social
+        font-size: 20px
+        span
+          gap: 16px
+          margin-top: 16px
+          a
+            width: 64px
+            height: 64px
+            gap: 16px
+            border-radius: 12px
+            svg
+              width: 40px
+              height: 40px
+      form
+        gap: 24px
+        .input.step-2
+          .testpass
+            font-size: 14px
+            span
+              font-size: 14px
+        button
+          font-size: 18px
+          padding: 19px
+          gap: 10px
+          border-radius: 12px
+        input.code
+          letter-spacing: 60px
+          font-size: 20px
+          padding: 15px 48px 12px 48px
+        input
+          padding: 15px 24px
+          gap: 10px
+          border-radius: 12px
+          font-size: 18px
+        label
+          gap: 12px
+          font-size: 18px
+          input
+            width: 24px
+            height: 24px
+        span
+          font-size: 18px
+  .searchform
+    border-radius: 16px
+    background: $primary1
+    left: 50%
+    transform: translateX(-50%)
+    min-height: auto
+    top: 200px
+    max-width: 1140px
+    .full-button
+      background: $hoverblue
+      padding: 19px
+      gap: 8px
+      border-radius: 0px 0px 16px 16px
+      font-size: 24px
+      svg
+        height: 32px
+        width: 32px
+    .tabs
+      padding-bottom: 12px
+      gap: 32px
+      width: auto
+      .item.active
+        font-size: 24px
+        &::after
+          height: 3px
+          bottom: -12px
+      .item
+        font-size: 20px
+    .wrapper
+      gap: 24px
+      padding: 24px
+    .title
+      font-size: 24px
+    .tags
+      flex-wrap: nowrap
+      display: flex
+      gap: 16px
+      .tag
+        padding: 10px 16px
+        gap: 10px
+        border-radius: 8px
+        font-size: 14px
+    .products, .news, .articles
+      gap: 16px
+      .line
+        padding-bottom: 16px
+        flex-direction: row
+        align-items: center
+        gap: 0px
+        span
+          width: auto
+          gap: 24px
+          img
+            width: 80px
+            height: 80px
+            border-radius: 12px
+          .button
+            padding: 14px 40px
+            gap: 10px
+            border-radius: 12px
+            font-size: 16px
+            width: auto
+          .rate
+            gap: 4px
+            font-size: 16px
+            width: auto
+          >div
+            gap: 8px
+            .name
+              font-size: 18px
+            .price
+              font-size: 24px
+    .content-type
+      .empty
+        img
+          position: absolute
+          bottom: -24px
+          max-height: 450px
+          width: auto
+          right: 0
+        span
+          width: 60%
+          padding: 40px
+          gap: 16px
+          margin-bottom: 200px
+          .title
+            font-size: 32px
+          .subtitle
+            font-size: 20px
+  .search-page
+    border-radius: 0px
+    h1
+      margin-top: 64px
+      font-size: 40px
+      margin-bottom: 32px
+    ul
+      gap: 16px
+      margin-bottom: 100px
+      padding-left: 40px
+      li
+        font-size: 18px
+    img
+      width: 120%
+      position: absolute
+  .catalog
+    .catalog-filter
+      .tabs
+        padding-bottom: 10px
+        gap: 32px
+        margin-bottom: 32px
+        .tab.active
+          &::after 
+            bottom: -10px
+        .tab
+          font-size: 20px
+          span
+            display: inline-block
+  .case_top-line_wrapper
+    padding-bottom: 100px
+    .case_list
+      .item
+        width: 180px
+        height: 120px
+        padding: 8px 21px
+        .hover
+          display: block
+        span
+          display: block
+    .case_top-line
+      margin: 32px 0 0 0
+      .account_wrapper
+        gap: 16px
+        .wallet
+          margin-right: 16px
+          svg
+            width: 60px
+            height: 48px
+        .name
+          gap: 8px
+          span
+            gap: 4px
+            .account
+              font-size: 14px
+            .balance
+              font-size: 16px
+          img
+            width: 48px
+            height: 48px
+        .apps
+          svg
+            width: 48px
+            height: 48px
+  .case_wrapper
+    .case-menu
+      flex-direction: row
+      height: 127px
+      top: -50px
+      padding: 8px
+      gap: 8px
+      border-radius: 16px
+      .item
+        &:last-child
+          border-right: 1px solid rgba(255, 255, 255, 0.30)
+          font-size: 18px
+          span
+            gap: 16px
+      .item
+        width: 280px
+        height: 111px
+        border-radius: 12px
+        font-size: 18px
+        p
+          padding: 16px
+    .case-info_blocks
+      .col-xl-4
+        .block
+          height: 350px
+          margin-bottom: 0px
+          padding: 56px
+          p
+            font-size: 32px
+            right: 56px
+            bottom: 56px
+            gap: 8px
+          img
+            left: 0
+            max-height: none
+            bottom: 0
+      .col-xl-8
+        .block
+          padding: 70px
+          img
+            position: absolute
+            bottom: 0
+            width: auto
+            right: 0
+      .block
+        height: 350px
+        border-radius: 26px
+        img
+          height: 100%
+          width: auto
+          position: absolute
+        .content
+          gap: 48px
+          width: auto
+          .line
+            gap: 80px
+            .item
+              gap: 24px
+              svg
+                width: 56px
+                height: 56px
+              span
+                max-width: 150px
+                .count
+                  font-size: 24px
+                p
+                  font-size: 18px
+  .case_wrapper
+    .catalog-filter
+      .filters
+        gap: 40px
+        flex-wrap: nowrap
+        .search
+          width: 260px
+          height: 56px
+          input
+            padding: 12px 16px
+            font-size: 20px
+            border-radius: 12px
+          svg
+            right: 16px
+        .range
+          gap: 32px
+          flex-wrap: nowrap
+          width: auto
+          .wrapper
+            width: 240px
+          #range1
+            border-radius: 12px 0px 0px 12px
+          #range2
+            border-radius: 0px 12px 12px 0px
+          #range1, #range2
+            height: 56px
+            padding: 13px 16px
+            font-size: 20px
+          .slider
+            width: auto
+            .counters
+              margin-bottom: 20px
+              #range5, #range6
+                font-size: 16px
+            .container 
+              width: 380px
+              input[type="range"]::-webkit-slider-thumb
+                height: 24px
+                width: 24px
+      .balance
+        margin-top: 0px
+        font-size: 20px
+        padding: 14px 16px
+        gap: 32px
+        border-radius: 12px
+      .cats
+        margin-top: 0px
+        height: 88px
+        padding: 8px
+        gap: 10px
+        border-radius: 16px !important
+        flex-wrap: nowrap
+        .item
+          border-radius: 12px
+          font-size: 18px
+          padding: 24px
+          width: 260px
+          height: 100%
+          .lay
+            gap: 8px
+            font-size: 18px
+            border-radius: 12px
+      .cats-active
+        margin-top: 0px
+        margin-bottom: 13px
+        font-size: 20px
+      ul.list
+        li
+          a
+            font-size: 18px
+            gap: 8px
+  .case_list_wrapper
+    margin-top: 64px
+    .title
+      gap: 24px
+      margin-bottom: 22px
+      .hide-button
+        padding: 6px 16px
+        gap: 8px
+        border-radius: 10px
+        font-size: 20px
+    .cases
+      margin-bottom: 64px
+      gap: 32px
+      .item
+        width: calc(100% / 5 - 32px)
+        .name
+          font-size: 24px
+          margin-bottom: 8px
+        .price
+          padding: 6px 16px
+          gap: 8px
+          font-size: 20px
+  .case_profile
+    .info-block
+      border-radius: 16px
+      padding: 32px
+      height: 240px
+      margin-top: 0px
+      .title
+        font-size: 24px
+        margin-bottom: 12px
+      .subtitle
+        font-size: 20px
+        margin-bottom: 18px
+      a
+        padding: 15px 32px
+        border-radius: 16px
+        font-size: 20px
+    .statistics
+      padding: 32px
+      gap: 22px
+      border-radius: 16px
+      .profile
+        span
+          gap: 16px
+          a
+            svg
+              height: 64px
+              width: 64px
+          img
+            border-radius: 16px
+            width: 64px
+            height: 64px
+          .info
+            gap: 4px
+            .name
+              font-size: 20px
+            .balance
+              font-size: 24px
+      .bonus
+        border-radius: 24px
+        padding: 16px
+        .button
+          font-size: 20px
+          padding: 15px 32px
+          gap: 10px
+          border-radius: 16px
+          width: auto
+        img
+          display: block
+    .case_items
+      margin-top: 70px
+      margin-bottom: 80px
+      h1
+        gap: 8px
+        span
+          font-size: 20px
+      .button_sell
+        padding: 15px 32px
+        gap: 8px
+        border-radius: 12px
+        font-size: 20px
+      .items_wrapper
+        margin-top: 48px
+        border-radius: 24px
+        padding: 24px
+        flex-direction: row
+        align-items: center
+        >img
+          left: 0
+          bottom: 0
+          right: auto
+          height: 100%
+          transform: none
+        .button
+          font-size: 20px
+          padding: 22px 32px
+          gap: 16px
+          border-radius: 12px
+          svg
+            width: 29px
+            height: 24px
+        span
+          gap: 8px
+          padding-left: 140px
+          .title
+            font-size: 24px
+          .subtitle
+            margin-bottom: 0px
+            font-size: 20px
+  .single_case
+    h1
+      margin-bottom: 40px
+      justify-content: center
+      .button_back
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        padding: 11px 24px
+        gap: 8px
+        border-radius: 10px
+        font-size: 18px
+    .case_section
+      border-radius: 24px
+      margin-bottom: 180px
+      height: 300px
+      img
+        top: -10%
+        height: 110%
+      span
+        gap: 16px
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -40%
+        width: auto
+      .button_open
+        padding: 19px 64px
+        gap: 10px
+        border-radius: 12px
+        font-size: 24px
+      .button_balance
+        padding: 19px 32px
+        gap: 16px
+        border-radius: 12px
+        font-size: 24px
+        svg
+          width: 32px
+          height: 32px
+  .case_items
+    margin-bottom: 64px
+    padding: 64px 0
+    h1
+      margin-bottom: 40px
+    .item
+      width: calc(100% / 6 - 2px)
+      height: 180px
+      span
+        left: 16px
+        bottom: 16px
+        font-size: 14px
+  .case_balance
+    h1
+      margin-bottom: 32px
+      gap: 16px
+    .case_balance_add
+      margin-bottom: 80px
+      .payments_list, .mobile_payments .wrapper
+        gap: 8px
+        .item
+          width: calc(100% / 4 - 8px)
+          height: 140px
+          padding: 0px 53px 0px 53px
+          border-radius: 16px
+          .hover
+            border-radius: 16px
+    .payment_form
+      form
+        gap: 24px
+        .payment
+          padding: 24px
+          border-radius: 16px
+          flex-direction: row
+          span
+            font-size: 20px
+            gap: 8px
+            .selected_payment
+              font-size: 24px
+              display: block
+        .promo
+          padding: 24px
+          gap: 8px
+          border-radius: 16px
+          label
+            svg
+              left: 16px
+              width: 24px
+              height: 24px
+            input
+              padding: 22px 24px 22px 64px
+              gap: 16px
+              border-radius: 16px
+              font-size: 20px
+          button, .button
+            padding: 22px 24px
+            gap: 16px
+            border-radius: 16px
+            font-size: 20px
+        .summ
+          padding: 24px
+          gap: 24px
+          border-radius: 16px
+          .checkbox
+            label
+              gap: 16px
+              svg
+                width: 48px
+                height: 32px
+              span
+                font-size: 16px
+                a
+                  font-size: 16px
+          span
+            font-size: 18px
+          label
+            svg
+              left: 16px
+              width: 24px
+              height: 24px
+            input
+              padding: 22px 24px 22px 64px
+              gap: 16px
+              border-radius: 16px
+              font-size: 20px
+        .send
+          padding: 19px 32px
+          gap: 16px
+          border-radius: 16px
+          font-size: 24px
+          svg
+            width: 32px
+            height: 32px
+  .card.layout
+    .img
+      height: 330px
+    .name
+      height: 25px
+    .price
+      .sale
+        height: 35px
+      .lastprice
+        height: 25px
+        width: 110px
+        margin-bottom: 0px
+  .case_section.rullet_case
+    height: auto
+    margin-bottom: 20px
+    .rullet
+      margin: auto
+      padding: 21px
+      .wraper
+        .window
+          height: 258px
+        .list
+          li
+            img
+              width: 164px
+              height: 258px
+  .case_open_btns
+    gap: 10px
+    flex-direction: row
+    margin-bottom: 100px
+    .button_open
+      font-size: 18px
+      padding: 15px 40px
+      border-radius: 12px
+    .button_balance
+      font-size: 18px
+      padding: 15px 40px
+      border-radius: 12px
+  .z_popup
+    padding: 32px
+    border-radius: 32px
+    max-width: 880px
+    .title
+      font-size: 32px
+      margin-bottom: 32px
+      .close
+        .mfp-close
+          padding: 5px
+    hr
+      margin: 0 0 21px 0
+    .info-line
+      margin-bottom: 16px
+      a.check
+        gap: 8px
+        font-size: 18px
+        svg
+          width: 24px
+          height: 24px
+      .status
+        font-size: 18px
+        span
+          padding-left: 8px
+          font-size: 18px
+    .wrapper
+      gap: 40px
+      margin-bottom: 24px
+      .column-1
+        width: 335px
+        img
+          border-radius: 30px
+      .column-2
+        width: calc(100% - 335px - 40px)
+        .super-info
+          .line
+            span
+              .name
+                font-size: 20px !important
+        .info
+          gap: 24px
+          padding: 16px 0px
+          margin-bottom: 50px
+          .line
+            flex-direction: row
+            span
+              gap: 4px
+              font-size: 16px
+              .name
+                font-size: 24px
+        .code
+          gap: 8px
+          position: relative
+          left: auto
+          bottom: auto
+          .code_wrapper
+            width: calc(100% - 8px - 69px)
+            padding: 6.5px 32px
+            gap: 2px
+            font-size: 14px
+            border-radius: 16px
+            .code-get
+              font-size: 24px
+          .copy-button
+            width: 69px
+            height: 69px
+            border-radius: 16px
+    .support
+      gap: 24px
+      font-size: 20px
+      flex-direction: row
+      .button
+        padding: 15px
+        gap: 10px
+        font-size: 18px
+        border-radius: 16px
+        width: auto
+    .info-blob
+      padding: 16px 24px
+      gap: 10px
+      border-radius: 30px
+      margin-bottom: 16px
+      font-size: 20px
+  #z3_popup
+    .wrapper
+      .column-2
+        .super-info
+          position: relative
+          left: auto
+          bottom: auto
+          margin-bottom: 24px !important
+        .info
+          margin-bottom: 24px
+
+
++media-breakpoint-up(xl)
+
+@media (min-width: 1490px)
+@media (min-width: 1600px)

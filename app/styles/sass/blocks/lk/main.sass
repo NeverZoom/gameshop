@@ -1,0 +1,130 @@
+.lk-page
+  overflow-x: hidden
+  .go_back
+    margin-top: 32px
+    margin-bottom: 44px
+    display: flex
+    align-items: center
+    gap: 16px
+    color: white
+    font-size: 20px
+    font-weight: 400
+    line-height: 140%
+  .block
+    width: 100%
+    border-radius: 24px
+    background: $primary1
+    height: 350px
+    padding: 40px
+    color: white
+    font-size: 40px
+    font-weight: 500
+    line-height: 120%
+    margin-bottom: 32px
+    display: block
+    position: relative
+    svg
+      position: absolute
+      right: 0
+      bottom: 0
+  .profile_info_sidebar
+    display: flex
+    width: 100%
+    // height: calc(100% - 32px)
+    justify-content: flex-start
+    padding: 40px 32px 32px 32px
+    flex-direction: column
+    align-items: flex-start
+    gap: 44px
+    border-radius: 40px 0px 0px 40px
+    background: $nightblue2
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      background: $nightblue2
+      width: 100%
+      height: 100%
+      top: 0
+      left: 50%
+      z-index: -1
+    .part_one
+      display: flex
+      flex-direction: column
+      gap: 16px
+      align-items: center
+      justify-content: center
+      width: 100%
+      padding-bottom: 32px
+      border-bottom: 1px solid $lightblue
+      img
+        width: 120px
+        height: 120px
+        border-radius: 10000px
+        border: 4px solid #3B6DEC
+        margin: 0 auto
+      .name
+        color: white
+        text-align: center
+        font-size: 24px
+        font-weight: 500
+        line-height: 140%
+        max-width: 50%
+      .bonus
+        display: flex
+        height: 72px
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 8px
+        align-self: stretch
+        color: white
+        text-align: center
+        font-size: 18px
+        font-weight: 500
+        line-height: 140%
+        border-radius: 16px
+        background: $primary1
+        span
+          color: $lightblue2
+          text-align: center
+          font-size: 16px
+          font-weight: 400
+          line-height: 140%
+    .part_two
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 100%
+      gap: 32px
+      .line
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 12px
+        color: $lightblue2
+        text-align: center
+        font-size: 20px
+        font-weight: 400
+        line-height: 140%
+      span
+        color: white
+        text-align: center
+        font-size: 32px
+        font-weight: 500
+        line-height: 120%
+    a.button
+      display: flex
+      width: 100%
+      padding: 15px
+      justify-content: center
+      align-items: center
+      gap: 10px
+      border-radius: 16px
+      border: 1px solid $lightblue
+      color: white
+      text-align: center
+      font-size: 18px
+      font-weight: 500
+      line-height: 140%

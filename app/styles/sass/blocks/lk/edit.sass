@@ -1,0 +1,129 @@
+.lk-page.edit
+  .logout_m
+    margin-top: 0
+    margin-bottom: 10px
+  h1
+    margin-bottom: 48px
+    color: white
+  .line
+    display: flex
+    gap: 32px
+    margin-bottom: 32px
+    label
+      width: calc(50% - 16px)
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 16px
+      color: white
+      font-size: 18px
+      font-weight: 400
+      line-height: 140%
+      position: relative
+      input
+        display: flex
+        padding: 19px 24px
+        align-items: center
+        gap: 10px
+        flex: 1 0 0
+        align-self: stretch
+        border-radius: 12px
+        border: 1px solid $lightblue
+        color: rgba(255, 255, 255, 0.60)
+        font-size: 18px
+        font-weight: 400
+        line-height: 140%
+        background: none
+        &::placeholder
+          color: rgba(255, 255, 255, 0.60)
+      .aproved
+        color: white
+        font-size: 12px
+        font-weight: 400
+        line-height: 140%
+        position: absolute
+        left: 40%
+        bottom: 24px
+      svg
+        position: absolute
+        right: 0
+        bottom: 0
+    .info_block
+      width: calc(50% - 16px)
+      height: 100%
+      padding: 24px
+      gap: 16px
+      border-radius: 16px
+      background: $primary1
+      color: $lightblue2
+      font-size: 20px
+      font-weight: 400
+      line-height: 140%
+      a
+        color: white
+        display: inline-block
+  h2
+    margin-top: 40px
+    margin-bottom: 20px
+    color: white
+  .subtitle
+    color: $lightblue2
+    font-size: 20px
+    font-style: normal
+    font-weight: 400
+    line-height: 140%
+  .social
+    display: flex
+    align-items: flex-start
+    gap: 24px
+    align-self: stretch
+    margin: 32px 0
+  .checkbox
+    color: rgba(255, 255, 255, 0.60)
+    font-size: 16px
+    font-weight: 400
+    line-height: 140%
+    margin-bottom: 46px
+    a
+      color: white
+    label
+      display: flex
+      flex-direction: row
+      gap: 16px
+      align-items: center
+      input
+        display: none
+      svg
+        .circle
+          fill: white
+        rect
+          transition: all 0.3s ease
+      svg.active
+        .circle
+          fill: $lightblue
+          x: 4 !important
+      &:hover
+        cursor: pointer
+  .button_wrapper
+    display: inline-flex
+    align-items: center
+    gap: 24px
+    button
+      display: flex
+      padding: 18px 40px
+      justify-content: center
+      align-items: center
+      gap: 10px
+      border: none
+      border-radius: 16px
+      background: $primary1
+      color: #FFF
+      font-size: 20px
+      font-weight: 500
+      line-height: 140%
+      width: 100%
+    span
+      color: $lightblue2
+      font-size: 16px
+      font-weight: 400
+      line-height: 140%

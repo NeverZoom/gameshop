@@ -1,0 +1,100 @@
+// USER VARIABLES SECTION
+
+$accent: skyblue // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$roboto: roboto, sans-serif // User Font Family
+$inter: inter, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+
+// green
+// $primary1: #1D8627
+// $primary2: #103113
+// $mainbg: #0B1A0C
+// $hoverblue: #0B1A0C
+// $black: #103113
+// $hoverblack: rgba(26, 31, 48, 0.50)
+// $lightblue: #BAE7BE
+// $lightred: #F5CDCD
+// $grey: #808FA8
+// $lightblue2: #93A0EB
+// $blue: #6E81EF
+// $pink: #F095FF
+// $nightblue: #54639E
+// $nightblue2: #152879
+
+
+// blue
+$primary1: #2842D8
+$primary2: #0D2049
+$mainbg: #071639
+$hoverblue: #162478
+$black: #1A1F30
+$hoverblack: rgba(26, 31, 48, 0.50)
+$lightblue: #9CABFF
+$lightred: #F5CDCD
+$grey: #808FA8
+$lightblue2: #93A0EB
+$blue: #6E81EF
+$pink: #F095FF
+$nightblue: #54639E
+$nightblue2: #152879
+
+
+
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 32px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/magnific-popup/src/css/main.scss' // magnific-popup
+@import 'node_modules/slick-carousel/slick/slick.scss' // slick carousel
+@import 'node_modules/slick-carousel/slick/slick-theme.scss' // slick carousel
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto', normal, 400, '../fonts/Roboto-Regular.woff2')
+@include font('roboto', normal, 500, '../fonts/Roboto-Medium.woff2')
+@include font('inter', normal, 400, '../fonts/Inter-Regular.woff2')
+@include font('inter', normal, 500, '../fonts/Inter-Medium.woff2')
+
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $inter
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

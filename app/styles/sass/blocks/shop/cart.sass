@@ -1,0 +1,285 @@
+.cart-page
+  background-image: url(../images/dist/layer_1.png) 
+  background-repeat: repeat
+  background-position: top left
+  min-height: 100%
+  border-radius: 0px
+  padding-bottom: 64px
+  .clear_all
+    a
+      display: flex
+      align-items: center
+      gap: 8px
+      color: white
+      font-size: 14px
+      font-weight: 400
+      line-height: 140%
+      margin-bottom: 40px
+  .go_back
+    display: inline-flex
+    align-items: center
+    gap: 16px
+    color: rgba(255, 255, 255, 0.60)
+    font-size: 20px
+    font-weight: 400
+    line-height: 140%
+    margin-top: 32px
+    margin-bottom: 32px
+  h1
+    color: white
+    margin-bottom: 48px
+    span
+      color: $lightblue2
+      font-size: 20px
+      font-weight: 400
+      line-height: 140%
+  .scroll_block 
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    height: 100%
+    .scroll
+      max-height: 100vh
+      overflow-y: scroll
+      display: flex
+      gap: 32px
+      flex-direction: column
+      padding-right: 8px
+      &::-webkit-scrollbar
+        width: 7px
+      &::-webkit-scrollbar-thumb
+        border-radius: 10px
+        background-color: $primary1
+      &::-webkit-scrollbar-track
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2)
+        border-radius: 10px
+        background-color: $lightblue
+      .item
+        display: flex
+        align-items: center
+        gap: 24px
+        img
+          width: 140px
+          height: 140px
+          border-radius: 24px
+          object-fit: cover
+        span
+          width: 100%
+          .delete
+            background: none
+            border: none
+          .name
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            margin-bottom: 20px
+            p
+              color: white
+              font-size: 20px
+              font-weight: 500
+              line-height: 140%
+              max-width: 80%
+          .qty-btn
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            .qty
+              display: flex
+              gap: 16px
+              .disabled
+                background: $hoverblue
+                pointer-events: none
+              button
+                border-radius: 12px
+                padding: 11px 12px
+                background: $primary1
+                border: none
+              input
+                max-width: 25px
+                background: none
+                border: none
+                color: white
+                font-size: 24px
+                font-weight: 500
+                line-height: 140%
+            .price
+              color: white
+              font-size: 24px
+              font-weight: 500
+              line-height: 140%
+    .total
+      display: flex
+      justify-content: space-between
+      color: rgba(255, 255, 255, 0.60)
+      font-size: 24px
+      font-weight: 500
+      line-height: 140%
+      .price
+        color: white
+        font-size: 40px
+        font-weight: 500
+        line-height: 120%
+  .fields
+    .label
+      display: flex
+      flex-direction: column
+      gap: 16px
+      color: white
+      font-size: 24px
+      font-weight: 500
+      line-height: 140%
+      margin-bottom: 24px
+      span
+        b
+          font-weight: 500
+          color: $lightblue
+      textarea
+        resize: none
+        display: flex
+        height: 160px
+        padding: 24px
+        align-items: flex-start
+        align-self: stretch
+        border-radius: 16px
+        background: $hoverblue
+        border: none
+        color: rgba(255, 255, 255, 0.60)
+        font-size: 20px
+        font-weight: 400
+        line-height: 140%
+        &::placeholder
+          color: rgba(255, 255, 255, 0.60)
+      .select.active
+        .arr
+          transform: rotate(180deg)
+      .select
+        border-radius: 16px
+        background: $hoverblue
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 24px
+        img
+          max-height: 100%
+          width: auto
+        &:hover
+          cursor: pointer
+        .arr
+          transition: all 0.3s ease
+        select
+          display: none
+      .options
+        display: none
+        .option
+          border-radius: 16px
+          background: $hoverblue
+          display: flex
+          justify-content: start
+          align-items: center
+          padding: 15px 24px
+          margin-bottom: 5px
+          &:hover
+            cursor: pointer
+      .promo
+        display: flex
+        padding: 24px
+        align-items: flex-start
+        gap: 8px
+        border-radius: 24px
+        background: $hoverblue
+        a.button
+          display: flex
+          padding: 24px
+          align-items: flex-start
+          gap: 16px
+          align-self: stretch
+          border-radius: 16px
+          background: $primary1
+          color: #FFF
+          font-size: 20px
+          font-weight: 500
+          line-height: 140%
+        label
+          position: relative
+          width: 100%
+          .icon 
+            position: absolute
+            left: 24px
+            top: 50%
+            transform: translateY(-50%)
+          input
+            border-radius: 16px
+            background: $black
+            display: flex
+            padding: 24px 24px 24px 64px
+            align-items: flex-start
+            gap: 16px
+            flex: 1 0 0
+            color: white
+            font-size: 20px
+            font-weight: 400
+            line-height: 140%
+            width: 100%
+            border: none
+      .main-theme
+        display: flex
+        padding: 24px
+        align-items: flex-start
+        align-self: stretch
+        border-radius: 16px
+        background: $hoverblue
+        color: rgba(255, 255, 255, 0.60)
+        font-size: 20px
+        font-weight: 400
+        line-height: 140%
+        width: 100%
+        border: none
+        &::placeholder
+          color: rgba(255, 255, 255, 0.60)
+    .checkbox
+      color: rgba(255, 255, 255, 0.60)
+      font-size: 16px
+      font-weight: 400
+      line-height: 140%
+      a
+        color: white
+      label
+        display: flex
+        flex-direction: row
+        gap: 16px
+        align-items: center
+        input
+          display: none
+        svg
+          .circle
+            fill: white
+          rect
+            transition: all 0.3s ease
+        svg.active
+          .circle
+            fill: $lightblue
+            x: 4 !important
+        &:hover
+          cursor: pointer
+    .main_button
+      display: flex
+      width: 100%
+      padding: 19px 32px
+      justify-content: center
+      align-items: center
+      gap: 16px
+      align-self: stretch
+      border-radius: 16px
+      background: $primary1
+      color: white
+      text-align: center
+      font-size: 24px
+      font-weight: 500
+      line-height: 140%
+      border: none
+      span
+        color: $lightblue
+
+
+
+
