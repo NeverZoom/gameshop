@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	$('.slider_first').slick({
-		infinite: false,
-		// autoplay: true,
+		infinite: true,
+		autoplay: true,
 		arrows: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
