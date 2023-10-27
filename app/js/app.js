@@ -222,10 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.catalog_menu_layer').addClass('active');
 
 
-		$(window).on('scroll', function() {
-			$('.catalog_menu').removeClass('active');
-			$('.catalog_menu_layer').removeClass('active');	
-		});
+		// $(window).on('scroll', function() {
+		// 	$('.catalog_menu').removeClass('active');
+		// 	$('.catalog_menu_layer').removeClass('active');	
+		// });
 
 	});
 
