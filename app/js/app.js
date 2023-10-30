@@ -1023,6 +1023,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	$('#tg_login_popup .button.step-1').on('click', function() {
+
+		var mail = $('#tg_login_popup .wrapper form .mail').val();
+		if (mail != '') {
+			postData('https://extraplay.net/api/startAuth', {email: mail})
+			.then((data) => {
+				// console.log(data);
+				// if(data['ok'] == true) {}
+			});
+		}
+
 		$('#tg_login_popup .step-1').addClass('d-none');
 		$('#tg_login_popup .title .main').empty();
 		$('#tg_login_popup .title .main').append('Подтвердите регистрацию');
@@ -2027,7 +2037,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// paspfpasf
+// rullet
 const Roulette = (function () {
     
 	const rotationStopEventName = "rotationStop";

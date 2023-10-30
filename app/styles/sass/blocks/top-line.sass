@@ -315,18 +315,24 @@ body.active
 
 .catalog_menu_layer.active
   opacity: 1
-  pointer-events: all
   z-index: 9998
+  pointer-events: all
+.catalog_menu_layer
+  opacity: 0
+  transition: opacity 0.1s ease
+  pointer-events: none
+  z-index: -9999
   position: absolute
   width: 100%
   height: 100%
   // background: red
+  background: rgba(8, 23, 58, 0.70)
   top: 0
   left: 0
 
 
 .catalog_menu
-  transition: all 0.3s ease
+  transition: opacity 0.3s ease
   position: absolute
   left: 50%
   transform: translateX(-50%)
@@ -366,11 +372,12 @@ body.active
     height: 1px
   .wrapper
     display: flex
+    height: 100%
   .titles
     border-right: 1px solid rgba(255, 255, 255, 0.30)
     padding-right: 32px
     max-width: 320px
-    width: 100%
+    width: 320px
     a
       color: #FFF
       font-size: 18px
@@ -391,6 +398,7 @@ body.active
       pointer-events: all
       z-index: 1
       display: inline-flex
+      width: calc(100% - 10px)
   .content
     padding: 24px 0 24px 32px
     >div
@@ -400,6 +408,7 @@ body.active
       display: none
       gap: 32px 0
       flex-wrap: wrap
+      width: 100%
       a
         color: #FFF
         font-size: 16px
@@ -423,8 +432,10 @@ body.active
   z-index: 9998
   position: absolute
   width: 100%
+  transition: opacity 0.1s ease
   height: 100%
   // background: red
+  background: rgba(8, 23, 58, 0.70)
   top: 0
   left: 0
 .searchform.active
@@ -434,7 +445,7 @@ body.active
 
 .searchform
   border-radius: 16px
-  transition: all 0.3s ease
+  transition: opacity 0.3s ease
   background: $primary1
   position: absolute
   left: 50%
