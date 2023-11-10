@@ -222,10 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.catalog_menu_layer').addClass('active');
 
 
-		$(window).on('scroll', function() {
-			$('.catalog_menu').removeClass('active');
-			$('.catalog_menu_layer').removeClass('active');	
-		});
+		// $(window).on('scroll', function() {
+		// 	$('.catalog_menu').removeClass('active');
+		// 	$('.catalog_menu_layer').removeClass('active');	
+		// });
 
 	});
 
@@ -1023,6 +1023,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	$('#tg_login_popup .button.step-1').on('click', function() {
+
+		var mail = $('#tg_login_popup .wrapper form .mail').val();
+		if (mail != '') {
+			postData('https://extraplay.net/api/startAuth', {email: mail})
+			.then((data) => {
+				// console.log(data);
+				// if(data['ok'] == true) {}
+			});
+		}
+
 		$('#tg_login_popup .step-1').addClass('d-none');
 		$('#tg_login_popup .title .main').empty();
 		$('#tg_login_popup .title .main').append('Подтвердите регистрацию');
@@ -1032,20 +1042,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		// $('#tg_login_popup .title .info').addClass('d-none');
 	});
 
-	$("#telegram-login-extraplay_bot").on("load", function() {
-		let head = $("#telegram-login-extraplay_bot").contents().find("head");
-		let css = `<style>html {
-			height: 100%!important;
-			}
-			body.widget_frame_base.tgme_widget.body_widget_login.r2x {
-					height: 100%!important;
-			}
-			.tgme_widget_login.large button.tgme_widget_login_button {
-					border-radius: 0!important;
-					height: 100%!important
-			}</style>`;
-		$(head).append(css);
-	});
+	// $("#telegram-login-extraplay_bot").on("load", function() {
+	// 	let head = $("#telegram-login-extraplay_bot").contents().find("head");
+	// 	let css = `<style>html {
+	// 		height: 100%!important;
+	// 		}
+	// 		body.widget_frame_base.tgme_widget.body_widget_login.r2x {
+	// 				height: 100%!important;
+	// 		}
+	// 		.tgme_widget_login.large button.tgme_widget_login_button {
+	// 				border-radius: 0!important;
+	// 				height: 100%!important
+	// 		}</style>`;
+	// 	$(head).append(css);
+	// });
 
 
 
@@ -1622,7 +1632,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if(num['active'] == true) {active = 'active'}
 			if (num['label'] == '...') {
 				$('.catalog-footer .pagination ul').append('<li><a href="#">'+num['label']+'</a></li>');
-			} else if (num['label'] == '&laquo; Previous') {
+			} else if (num['label'] == 'pagination.previous') {
 				if (prevPage != null) {
 					$('.catalog-footer .pagination ul').append(`
 						<li><a data-page="`+num['url'].split('=')[1]+`" href="#">
@@ -1634,7 +1644,7 @@ document.addEventListener('DOMContentLoaded', () => {
 								</svg></a>
 						</li>`);
 				}
-			} else if (num['label'] == 'Next &raquo;') {
+			} else if (num['label'] == 'pagination.next') {
 				if (nexPage != null) {
 					$('.catalog-footer .pagination ul').append(`
 						<li><a data-page="`+num['url'].split('=')[1]+`" href="#">
@@ -2027,7 +2037,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// paspfpasf
+// rullet
 const Roulette = (function () {
     
 	const rotationStopEventName = "rotationStop";
@@ -2297,6 +2307,7 @@ const Roulette = (function () {
 })();
 
 
+if ($('.roulette').length) {
 	let options = {
     spacing: 2,    
     acceleration: 350, 
@@ -2324,6 +2335,7 @@ const Roulette = (function () {
 		roulette.rotateTo(num, { tracks: 2, random: false });
 	});
 
+}
 
 
 

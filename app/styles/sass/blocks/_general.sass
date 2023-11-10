@@ -884,13 +884,15 @@ body
 
 .tg_login
   position: relative
+  overflow: hidden
   iframe
     height: 100% !important
     width: 100% !important
     position: absolute
     top: 0
     left: 0
-    opacity: 0
+    opacity: 0.000001
+    transform: scale(10)
     html, body, div
       height: 100% !important
     button
@@ -942,12 +944,17 @@ body
   border: none !important
   padding: 0 !important
 .prize-item
-  width: 130px
-  height: 120px
+  border: none !important
+  width: 93px
+  height: 122px
   padding: 0 !important
   border: 1px solid
   line-height: 115px
   text-align: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .roulette
   // position: relative !important
