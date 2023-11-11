@@ -1592,7 +1592,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							<!-- <div class="line">Издатель: <span>Rockstar Games</span></div> -->
 							<div class="line">Платформа: 
 								<span>
-									<img src="https://extraplay.net/`+ item['category']['icon_path'] +`" alt="">       
+									<img src="https://extraplay.net/`+ item['platform']['icon_path'] +`" alt="">       
 								</span>
 							</div>
 						</div>
