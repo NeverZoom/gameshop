@@ -20,11 +20,15 @@
     // display: block
     display: grid
   .content_catalog
+    width: 100%
     display: none
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
     grid-template-rows: 1fr 1fr 1fr
     gap: 32px 32px
     grid-template-areas: ". . . . ." ". . . . ." ". . . . ."
+    .card
+      .price
+        flex-wrap: wrap
   .tabs
     margin-top: 24px
     margin-bottom: 40px

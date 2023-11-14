@@ -1948,6 +1948,274 @@ document.addEventListener('DOMContentLoaded', () => {
 		catalogFilterRequest(years, genres, categories, minprice, maxprice, 0, 0, type);
 
 	}
+
+	// main page
+
+
+	function productCardDrawMain(item) {
+		// console.log(item);
+
+		var activeGrid = 'active';
+
+		$('*[data-tab=digital]').append(`
+				<a href="`+ item['cart_link'] +`" class="card `+activeGrid+`">
+					<span>
+					<div class="lay_wrapper">
+						<div class="lay">
+							<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" width="40" height="40" rx="20" fill="white"/>
+								<path d="M22.93 13.9301L29 20.0001L22.93 26.0701" stroke="#2842D8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M12 20H28.83" stroke="#2842D8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>   
+							Подробнее   
+						</div>
+						<img src="https://extraplay.net/`+ item['card_image'] +`" alt="">
+					</div>
+					<div class="name">`+ item['name'] +`</div>
+					</span>
+					<div class="price">
+						<div class="sale">-`+ item['sale_percent'] +`%</div>
+						<div class="lastprice">`+ item['old_price'] +`₽</div>
+						<div class="newprice">`+ item['price'] +`₽</div>
+					</div>
+				</a>
+		`);
+	}
+
+	function createGetLinkMain(years, genres, categories, minprice, maxprice, page, type) {
+
+		if(years.length != 0) {
+			var yearsStroke = '';
+			// var countElementsArr = years.length;
+			years.forEach((num, i) => {
+				yearsStroke += 'years[]='+num+'&';
+			})
+			// console.log(yearsStroke);
+		} else { yearsStroke = ''; } 
+
+		if(genres.length != 0) {
+			var genresStroke = '';
+			// var countElementsArr = genres.length;
+			genres.forEach((num, i) => {
+				genresStroke += 'genres[]='+num+'&';
+			})
+			// console.log(genresStroke);
+		} else { genresStroke = ''; }
+
+		if(categories.length != 0) {
+			var categoriesStroke = '';
+			// var countElementsArr = categories.length;
+			categories.forEach((num, i) => {
+				categoriesStroke += 'categories[]='+num+'&';
+			})
+			// console.log(categoriesStroke);
+		} else { categoriesStroke = ''; }
+
+		var limit = 30;
+		var tip = '';
+		if (type != null) {
+			tip = type;
+		}
+		if (page == 0) {
+			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip);
+			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
+		} else {
+			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip);
+			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
+		}
+
+	}
+
+	function catalogFilterDataHandlingMain(data, morelink) {
+		// console.log(data);
+		var products = data['products']['data'];
+		if (morelink != 1) {
+			$('*[data-tab=digital]').empty();
+		}
+		
+			products.forEach((item) => {
+				// console.log(item);
+				productCardDrawMain(item);
+			});
+		
+	}
+
+	function drawPaginationMain(data) {
+		$('section.main .main-content .catalog-tabs .pagination ul').empty();
+		var links = data['links'];
+		var nexPage = data['next_page_url'];
+		var prevPage = data['prev_page_url'];
+		// console.log(data);
+		links.forEach((num) => {
+			var active = '';
+			if(num['active'] == true) {active = 'active'}
+			if (num['label'] == '...') {
+				$('section.main .main-content .catalog-tabs .pagination ul').append('<li><a href="#">'+num['label']+'</a></li>');
+			} else if (num['label'] == 'pagination.previous') {
+				if (prevPage != null) {
+					$('section.main .main-content .catalog-tabs .pagination ul').append(`
+						<li><a data-page="`+num['url'].split('=')[1]+`" href="#">
+								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="40" y="40" width="40" height="40" rx="9" transform="rotate(-180 40 40)" fill="none" />
+									<path d="M23.0898 12.08L16.5698 18.6C15.7998 19.37 15.7998 20.63 16.5698 21.4L23.0898 27.92"
+										stroke="#9CABFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg></a>
+						</li>`);
+				}
+			} else if (num['label'] == 'pagination.next') {
+				if (nexPage != null) {
+					$('section.main .main-content .catalog-tabs .pagination ul').append(`
+						<li><a data-page="`+num['url'].split('=')[1]+`" href="#">
+								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="40" height="40" rx="9" fill="none" />
+									<path d="M16.9102 27.92L23.4302 21.4C24.2002 20.63 24.2002 19.37 23.4302 18.6L16.9102 12.08"
+										stroke="#9CABFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg></a>
+						</li>
+					`);
+				}
+			} else {
+				$('section.main .main-content .catalog-tabs .pagination ul').append('<li class="'+active+'"><a data-page="'+num['label']+'" href="#">'+num['label']+'</a></li>');
+			}
+		});
+		paginationEvents();
+	}
+
+	function catalogFilterRequestMain(years, genres, categories, minprice, maxprice, page, morelink, type) {
+		var getLink = createGetLinkMain(years, genres, categories, minprice, maxprice, page, type);
+
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', getLink);
+		xhr.send();
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					
+						const json = xhr.responseText;
+						const request = JSON.parse(json);
+
+						catalogFilterDataHandlingMain(request['data'], morelink)
+						drawPaginationMain(request['data']['products'])
+					
+				} else {
+					if (morelink != 1){
+						hideModel();
+						filterEmpty();
+					}
+				}
+			}
+		};
+
+	}
+
+	// USL
+	function productCardDrawMainUsl(item) {
+		// console.log(item);
+
+		var activeGrid = 'active';
+
+		$('*[data-tab=usluga]').append(`
+				<a href="`+ item['cart_link'] +`" class="card `+activeGrid+`">
+					<span>
+					<div class="lay_wrapper">
+						<div class="lay">
+							<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" width="40" height="40" rx="20" fill="white"/>
+								<path d="M22.93 13.9301L29 20.0001L22.93 26.0701" stroke="#2842D8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M12 20H28.83" stroke="#2842D8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>   
+							Подробнее   
+						</div>
+						<img src="https://extraplay.net/`+ item['card_image'] +`" alt="">
+					</div>
+					<div class="name">`+ item['name'] +`</div>
+					</span>
+					<div class="price">
+						<div class="sale">-`+ item['sale_percent'] +`%</div>
+						<div class="lastprice">`+ item['old_price'] +`₽</div>
+						<div class="newprice">`+ item['price'] +`₽</div>
+					</div>
+				</a>
+		`);
+	}
+
+	function catalogFilterDataHandlingMainUsl(data, morelink) {
+		// console.log(data);
+		var products = data['products']['data'];
+		if (morelink != 1) {
+			$('*[data-tab=usluga]').empty();
+		}
+		
+			products.forEach((item) => {
+				// console.log(item);
+				productCardDrawMainUsl(item);
+			});
+		
+	}
+
+	function catalogFilterRequestMainUsl(years, genres, categories, minprice, maxprice, page, morelink, type) {
+		var getLink = createGetLinkMain(years, genres, categories, minprice, maxprice, page, type);
+
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', getLink);
+		xhr.send();
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					
+						const json = xhr.responseText;
+						const request = JSON.parse(json);
+
+						catalogFilterDataHandlingMainUsl(request['data'], morelink)
+						// drawPaginationMain(request['data']['products'])
+					
+				} else {
+					if (morelink != 1){
+						hideModel();
+						filterEmpty();
+					}
+				}
+			}
+		};
+
+	}
+
+	$('section.main .main-content .catalog-tabs .buttonmore').on('click', function() {
+
+		var page = $('section.main .main-content .catalog-tabs .pagination ul li.active a').attr('data-page');
+		page = Number(page) + 1;
+
+		var genres = [];
+		var years = [];
+		var categories = [];
+		var minprice = 0;
+		var maxprice = 9999999;
+		var morelink = 1;
+
+		catalogFilterRequestMain(years, genres, categories, minprice, maxprice, page, morelink);
+
+		var type = '&type=usluga';
+		catalogFilterRequestMainUsl(years, genres, categories, minprice, maxprice, page, morelink, type);
+
+	});
+
+	if($('section.main .main-content .catalog-tabs').length != '') {
+
+		var genres = [];
+		var years = [];
+		var categories = [];
+		var minprice = 0;
+		var maxprice = 9999999;
+		var type = '';
+
+		catalogFilterRequestMain(years, genres, categories, minprice, maxprice, 0, 0, type);
+
+		type = '&type=usluga';
+		catalogFilterRequestMainUsl(years, genres, categories, minprice, maxprice, 0, 0, type);
+
+	}
 	
 
 
