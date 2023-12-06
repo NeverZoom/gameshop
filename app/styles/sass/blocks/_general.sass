@@ -250,6 +250,22 @@ body
         font-weight: 400
         line-height: 140%
 
+.cart_popups
+  width: 660px !important
+  .main_button
+    border-radius: 16px
+    background: #162478
+    display: flex
+    padding: 19px 32px
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 2px
+    align-self: stretch
+    color: #FFF
+    font-size: 24px
+    font-weight: 500
+    line-height: 140%
 
 .z_popup
   display: flex
@@ -324,7 +340,16 @@ body
         border-radius: 30px
         width: 100%
         object-fit: cover
-    .column-2
+    .column-full
+      width: 100% !important
+      .info
+        margin-bottom: 16px !important
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+    .column-2, .column-full
       width: calc(100% - 335px - 40px)
       .super-info
         .line

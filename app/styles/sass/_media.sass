@@ -1958,7 +1958,7 @@
         width: 156px
         img
           border-radius: 14px
-      .column-2
+      .column-2, .column-full
         width: calc(100% - 156px - 15px)
         .super-info
           .line
@@ -2084,6 +2084,20 @@
         gap: 8px
         border-radius: 12px
         font-size: 16px
+  .cart_popups
+    height: 100vh !important
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .column-full
+      .info
+        min-height: auto !important
+        .line
+          flex-direction: row !important
+    .main_button
+      border-radius: 16px
+      padding: 15px 32px
+      font-size: 18px
 
 +media-breakpoint-up(sm)
 +media-breakpoint-up(md)
@@ -3950,7 +3964,7 @@
         width: 335px
         img
           border-radius: 30px
-      .column-2
+      .column-2, .column-full
         width: calc(100% - 335px - 40px)
         .super-info
           .line
@@ -4073,6 +4087,12 @@
         gap: 8px
         border-radius: 16px
         font-size: 24px
+  .cart_popups
+    height: auto !important
+    .main_button
+      border-radius: 16px
+      padding: 19px 32px
+      font-size: 24px
 
 
 +media-breakpoint-up(xl)
