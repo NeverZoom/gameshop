@@ -1085,7 +1085,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	$(".searchform .scroller svg").on('click', function(event){
-		$('.searchform .scroll-line').animate({scrollLeft:'+=500'},500); 
+		$('.searchform .scroll-line').animate({scrollLeft:'+=500'},500);
+		$(".searchform .scroller-left").removeClass('d-none');
+	});
+	$(".searchform .scroller-left svg").on('click', function(event){
+		$('.searchform .scroll-line').animate({scrollLeft:'-=500'},500); 
+
+		// console.log($('.searchform .scroll-line').scrollLeft());
+
+		setTimeout(function() { 
+			if ($('.searchform .scroll-line').scrollLeft() == 0) {
+				$(".searchform .scroller-left").addClass('d-none');
+			}
+		}, 501);
+		
+
 	});
 
 	$(".block .content a.more").on('click', function(){

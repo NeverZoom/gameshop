@@ -546,6 +546,18 @@ body.active
       padding-right: 50px
       &::-webkit-scrollbar
         display: none
+    .scroller-left
+      // display: none
+      height: 100%
+      width: auto
+      left: 0
+      top: 20%
+      transform: translateY(-50%)
+      position: absolute
+      &:hover
+        cursor: pointer
+      svg
+        transform: rotate(180deg)
     .scroller
       height: 100%
       width: auto
