@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		$('.payment-popup .fields .select').siblings('.options').slideUp(100);
 		$('.payment-popup .fields .select').removeClass('active');
-
+		
 	});
 	
 	$('.checkbox input').on('change', function() {
@@ -684,6 +684,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		showCloseBtn: false,
 		focus: '#name',
 		mainClass: 'mfp-with-zoom',
+		fixedContentPos: true,
 		zoom: {
 			enabled: true,
 			duration: 300,
