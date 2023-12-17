@@ -1617,7 +1617,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					</span>
 					<div class="price">
 						<div class="sale">-`+ item['sale_percent'] +`%</div>
-						<div class="lastprice">`+ item['old_price'] +`₽</div>
+						<div class="lastprice">`+ item['marketing_price'] +`₽</div>
 						<div class="newprice">`+ item['price'] +`₽</div>
 					</div>
 				</a>
@@ -2015,7 +2015,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					</span>
 					<div class="price">
 						<div class="sale">-`+ item['sale_percent'] +`%</div>
-						<div class="lastprice">`+ item['old_price'] +`₽</div>
+						<div class="lastprice">`+ item['marketing_price'] +`₽</div>
 						<div class="newprice">`+ item['price'] +`₽</div>
 					</div>
 				</a>
@@ -2174,7 +2174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					</span>
 					<div class="price">
 						<div class="sale">-`+ item['sale_percent'] +`%</div>
-						<div class="lastprice">`+ item['old_price'] +`₽</div>
+						<div class="lastprice">`+ item['marketing_price'] +`₽</div>
 						<div class="newprice">`+ item['price'] +`₽</div>
 					</div>
 				</a>
