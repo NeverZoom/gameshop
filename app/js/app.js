@@ -1052,7 +1052,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		var mail = $('#tg_login_popup .wrapper form .mail').val();
 		if (mail != '') {
-			postData('https://extraplay.net/api/startAuth', {email: mail})
+			postData('/api/startAuth', {email: mail})
 			.then((data) => {
 				// console.log(data);
 				// if(data['ok'] == true) {}
@@ -1149,7 +1149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		var searchName = $(this).val();
 		const xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://extraplay.net/api/catalog/search?name='+searchName);
+		xhr.open('GET', '/api/catalog/search?name='+searchName);
 		xhr.send();
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState === 4) {
@@ -1233,7 +1233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('#login_popup .wrapper form .get_code').on('click', function() {
 		var mail = $('#login_popup .wrapper form .mail').val();
 		if (mail != '') {
-			postData('https://extraplay.net/api/startAuth', {email: mail})
+			postData('/api/startAuth', {email: mail})
 			.then((data) => {
 				// console.log(data);
 				if(data['ok'] == true) {
@@ -1251,7 +1251,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							// .then((data) => {
 							// 	console.log(data);
 							// });
-							window.location.href= 'https://extraplay.net/oauth/email?email='+mail+'&code='+cod;
+							window.location.href= '/oauth/email?email='+mail+'&code='+cod;
 							// const xhr = new XMLHttpRequest();
 							// xhr.open('GET', 'https://extraplay.net/oauth/email?email='+mail+'&code='+cod);
 							// xhr.send();
@@ -1503,10 +1503,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		if (page == 0) {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip);
-			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
+			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
 		} else {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip);
-			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
+			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
 		}
 
 	}
@@ -1581,7 +1581,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function productCardDraw(item) {
-		// console.log(item);
+		console.log(item);
 
 		var activeGrid = '';
 		var activeList = '';
@@ -1611,19 +1611,19 @@ document.addEventListener('DOMContentLoaded', () => {
 							</svg>   
 							Подробнее   
 						</div>
-						<img src="https://extraplay.net/`+ item['card_image'] +`" alt="">
+						<img src="/`+ item['card_image'] +`" alt="">
 					</div>
 					<div class="name">`+ item['name'] +`</div>
 					</span>
 					<div class="price">
 						<div class="sale">-`+ item['sale_percent'] +`%</div>
 						<div class="lastprice">`+ item['marketing_price'] +`₽</div>
-						<div class="newprice">`+ item['price'] +`₽</div>
+						<div class="newprice">`+ item['card_price'] +`₽</div>
 					</div>
 				</a>
 				<div class="product-card_list `+activeList+`">
 					<div class="column">
-						<a href="`+ item['cart_link'] +`"><img src="https://extraplay.net/`+ item['card_image'] +`" alt=""></a>
+						<a href="`+ item['cart_link'] +`"><img src="/`+ item['card_image'] +`" alt=""></a>
 					</div>
 					<div class="column-2">
 						<a href="`+ item['cart_link'] +`"><div class="name">`+ item['name'] +`</div></a>
@@ -1632,7 +1632,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							<!-- <div class="line">Издатель: <span>Rockstar Games</span></div> -->
 							<div class="line">Платформа: 
 								<span>
-									<img src="https://extraplay.net/`+ item['platform']['icon_path'] +`" alt="">       
+									<img src="/`+ item['platform']['icon_path'] +`" alt="">       
 								</span>
 							</div>
 						</div>
@@ -1640,8 +1640,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					<div class="column-3">
 						<div class="price">
 							<div class="sale">-`+ item['sale_percent'] +`%</div>
-							<div class="lastprice">`+ item['old_price'] +`₽</div>
-							<div class="newprice">`+ item['price'] +`₽</div>
+							<div class="lastprice">`+ item['marketing_price'] +`₽</div>
+							<div class="newprice">`+ item['card_price'] +`₽</div>
 						</div>
 						<a href="" class="button">Добавить в корзину</a>
 					</div>
@@ -2009,7 +2009,7 @@ document.addEventListener('DOMContentLoaded', () => {
 							</svg>   
 							Подробнее   
 						</div>
-						<img src="https://extraplay.net/`+ item['card_image'] +`" alt="">
+						<img src="/`+ item['card_image'] +`" alt="">
 					</div>
 					<div class="name">`+ item['name'] +`</div>
 					</span>
@@ -2058,10 +2058,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		if (page == 0) {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip);
-			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
+			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
 		} else {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip);
-			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
+			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
 		}
 
 	}
@@ -2168,14 +2168,14 @@ document.addEventListener('DOMContentLoaded', () => {
 							</svg>   
 							Подробнее   
 						</div>
-						<img src="https://extraplay.net/`+ item['card_image'] +`" alt="">
+						<img src="/`+ item['card_image'] +`" alt="">
 					</div>
 					<div class="name">`+ item['name'] +`</div>
 					</span>
 					<div class="price">
 						<div class="sale">-`+ item['sale_percent'] +`%</div>
 						<div class="lastprice">`+ item['marketing_price'] +`₽</div>
-						<div class="newprice">`+ item['price'] +`₽</div>
+						<div class="newprice">`+ item['card_price'] +`₽</div>
 					</div>
 				</a>
 		`);
@@ -2647,6 +2647,46 @@ if ($('.roulette').length) {
 
 
 
+
+
+
+// COLORS
+
+
+
+
+function getTheme() {
+	var getLink = '/api/appereance/theme';
+
+	const xhr = new XMLHttpRequest();
+	xhr.open('GET', getLink);
+	xhr.send();
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === 4) {
+			if (xhr.status === 200) {
+					const json = xhr.responseText;
+					const request = JSON.parse(json);
+					getColors(request);
+			} else {
+				if (morelink != 1){
+					hideModel();
+					filterEmpty();
+				}
+			}
+		}
+	};
+
+}
+getTheme();
+
+
+function getColors(request) {
+	var r = document.querySelector(':root');
+	$.each(request,function(index,value){
+		// console.log('Индекс: ' + index + '; Значение: ' + value);
+		r.style.setProperty('--color-theme-' + index , value);
+	});
+}
 
 
 
