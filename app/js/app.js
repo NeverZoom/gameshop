@@ -1195,7 +1195,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					</a>
           <div>
             <div class="name"><a href="`+ item['link'] +`">`+ item['name'] +`</a></div>
-            <div class="price">`+ item['price'] +` ₽</div>
+            <div class="price">`+ item['card_price'] +` ₽</div>
           </div>
         </span>
         <span>
@@ -1581,7 +1581,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function productCardDraw(item) {
-		console.log(item);
+		// console.log(item);
 
 		var activeGrid = '';
 		var activeList = '';
@@ -2016,7 +2016,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					<div class="price">
 						<div class="sale">-`+ item['sale_percent'] +`%</div>
 						<div class="lastprice">`+ item['marketing_price'] +`₽</div>
-						<div class="newprice">`+ item['price'] +`₽</div>
+						<div class="newprice">`+ item['card_price'] +`₽</div>
 					</div>
 				</a>
 		`);
