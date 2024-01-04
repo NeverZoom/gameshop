@@ -1195,7 +1195,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					</a>
           <div>
             <div class="name"><a href="`+ item['link'] +`">`+ item['name'] +`</a></div>
-            <div class="price">`+ item['card_price'] +` ₽</div>
+            <div class="price">`+ item['marketing_price'] +` ₽</div>
           </div>
         </span>
         <span>
@@ -1220,10 +1220,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			var id = $(this).attr('data-id');
 			var link = $(this).attr('data-link');
 			if (id != '' && link != '') {
-				postData(link, {})
-					.then((data) => {
-						console.log(data);
-					});
+
+				$.ajax({
+					url: link,
+					method: 'post',
+					dataType: 'html',
+					data: {text: id},
+					headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+					success: function(data){
+						//alert(data);
+					}
+				});
+
+				// postData(link, {})
+				// 	.then((data) => {
+				// 		console.log(data);
+				// 	});
 			}
 		});
 	}
@@ -1501,6 +1513,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (type != null) {
 			tip = type;
 		}
+		// console.log(maxprice);
+		// console.log(minprice);
 		if (page == 0) {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip);
 			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
@@ -1643,20 +1657,32 @@ document.addEventListener('DOMContentLoaded', () => {
 							<div class="lastprice">`+ item['marketing_price'] +`₽</div>
 							<div class="newprice">`+ item['card_price'] +`₽</div>
 						</div>
-						<a href="" class="button">Добавить в корзину</a>
+						<a href="javascript:void(0);" class="button add_card_btn" data-link="`+ item['cart'] +`" data-id="`+ item['id'] +`">В корзину</a>
 					</div>
 				</div>
 			</div>
 		`);
 
 		$('.catalog-filter .content-catalog.products .row .product-card_list .column-3 .button').on('click', function() {
-			// var id = $(this).attr('data-id');
+			var id = item['id'];
 			var link = item['cart_link'];
 			if (link != '') {
-				postData(link, {})
-					.then((data) => {
-						console.log(data);
-					});
+
+				$.ajax({
+					url: link,
+					method: 'post',
+					dataType: 'html',
+					data: {text: id},
+					headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+					success: function(data){
+						//alert(data);
+					}
+				});
+
+				// postData(link, {})
+				// 	.then((data) => {
+				// 		console.log(data);
+				// 	});
 			}
 		});
 	}
