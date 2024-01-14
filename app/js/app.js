@@ -1455,6 +1455,22 @@ document.addEventListener('DOMContentLoaded', () => {
 						const json = xhr.responseText;
 						const request = JSON.parse(json);
 						catalogFilterDataHandling(request['data'], morelink)
+
+						console.log(request);
+						var totalProductsCount = request['data']['products']['total'];
+						$('.catalog h1.inter span').remove();
+
+						if(genres.length > 1) {
+							$('.catalog-filter .inter').text('Каталог');
+							$('.catalog-filter .inter').append('<span></span>');
+						} else {
+							// genre name here
+							// $('.catalog-filter .inter').text('Каталог');
+							$('.catalog-filter .inter').append('<span></span>');
+						}
+
+						$('.catalog h1.inter span').append(totalProductsCount);
+
 						drawPagination(request['data']['products'])
 						$('.footer_filters').removeClass('d-none')
 				} else {
@@ -1506,7 +1522,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// console.log(minprice);
 		if (page == 0) {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip);
-			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
+			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
 		} else {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip);
 			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
@@ -1519,8 +1535,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		var products = data['products']['data'];
 		var totalProductsCount = data['products']['total'];
 
-		$('.catalog h1.inter span').empty();
-		$('.catalog h1.inter span').append(totalProductsCount);
+		// $('.catalog h1.inter span').empty();
+		// $('.catalog h1.inter span').append(totalProductsCount);
 		
 		if (morelink != 1) {
 			setTimeout(() => products.forEach((item) => {
