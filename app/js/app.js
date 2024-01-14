@@ -1252,30 +1252,19 @@ document.addEventListener('DOMContentLoaded', () => {
 					$('#login_popup .wrapper form .get_code').addClass('d-none');
 					$('#login_popup .wrapper form .code').removeClass('d-none');
 					countdown();
+
+					$('#login_popup .wrapper form input.code').on('input', function() {
+						var cod = $(this).val();
+						if (cod.length == 6 && cod != '') {
+							window.location.href= '/oauth/email?email='+mail+'&code='+cod;
+						}
+					});
+
 					$('#login_popup .wrapper form .counter_wrapper').on('click', function() {
 						var cod = $('#login_popup .wrapper form .code').val();
 						if(cod != '') {
 							
-							// console.log(mail);
-							// console.log(cod);
-
-							// postData('https://extraplay.net/oauth/email', {email: mail, code: cod})
-							// .then((data) => {
-							// 	console.log(data);
-							// });
 							window.location.href= '/oauth/email?email='+mail+'&code='+cod;
-							// const xhr = new XMLHttpRequest();
-							// xhr.open('GET', 'https://extraplay.net/oauth/email?email='+mail+'&code='+cod);
-							// xhr.send();
-							// xhr.onreadystatechange = function () {
-							// 	if (xhr.readyState === 4) {
-							// 		if (xhr.status === 200) {
-							// 				console.log(xhr.responseText);
-							// 		} else {
-							// 				console.error(xhr.statusText);
-							// 		}
-							// 	}
-							// };
 
 						} 
 					});

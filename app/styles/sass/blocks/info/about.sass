@@ -16,12 +16,35 @@
     width: 100%
     position: relative
     margin-bottom: 176px
+    .new_year_blob
+      position: absolute
+      z-index: 2
+      top: 100%
+      svg, img
+        max-width: 20vw
+        height: auto
+    .new_year_blob.left
+      left: 0
+    .new_year_blob.right
+      right: 0
+    .new_year_show
+      position: absolute
+      z-index: 2
+      top: -4%
+      svg, img
+        max-width: 10vw
+        height: auto
+    .new_year_show.left
+      left: -0.1%
+    .new_year_show.right
+      right: -0.1%
     .logo
       position: absolute
       left: 50%
       top: 32px
       transform: translateX(-50%)
     .banner
+      z-index: 3
       max-width: 748px
       position: absolute
       left: 50%
@@ -53,6 +76,12 @@
       display: flex
       gap: 24px
       padding: 24px 0
+      position: relative
+      img
+        position: absolute
+        width: 48px
+        top: 15px
+        left: 0
       svg
         width: 48px
       span
@@ -85,7 +114,11 @@
               background: none
     .block
       border-radius: 32px
-      background: $primary1
+      background-color: $primary1
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      background-blend-mode: lighten
       display: flex
       height: 400px
       padding: 48px
