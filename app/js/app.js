@@ -1522,7 +1522,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// console.log(minprice);
 		if (page == 0) {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip);
-			return 'https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
+			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page=1&limit='+limit+tip;
 		} else {
 			// console.log('https://extraplay.net/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip);
 			return '/api/catalog?'+yearsStroke+genresStroke+categoriesStroke+'&min_price='+minprice+'&max_price='+maxprice+'&page='+page+'&limit='+limit+tip;
